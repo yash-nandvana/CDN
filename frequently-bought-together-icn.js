@@ -1,0 +1,1672 @@
+// iconic-fbt-api.js
+
+(function () {
+  const IconicFbtApi = {
+    dummyData: {
+    "widgetDisabled": false,
+    "recommendationAlgorithm": "standard",
+    "recommendationSource": "mixed",
+    "recommendationProductGids": [
+      "gid://shopify/Product/8548530225335",
+      "gid://shopify/Product/8548530487479",
+      "gid://shopify/Product/8548530553015",
+      "gid://shopify/Product/8548530618551"
+    ],
+    "recommendationProducts": [
+      {
+        "gid": "gid://shopify/Product/8548530225335",
+        "handle": "kaka-boston-legacy-fc-elite-wht-8",
+        "title": "Kaka Boston Legacy FC Elite WHT",
+        "image": "https://cdn.shopify.com/s/files/1/0743/1461/2919/files/Kids-T-Shirt-Tri-Black_51447dae-2891-42bd-b8d5-5600014a38f0.jpg?v=1776924675",
+        "onlineStoreUrl": null,
+        "url": null,
+        "vendor": "500 LEVEL",
+        "productType": "Kids T-Shirt",
+        "tags": [
+          "500 LEVEL",
+          "Shopify Collective"
+        ],
+        "collections": [],
+        "status": "ACTIVE",
+        "available": true,
+        "inventory": 5,
+        "currencyCode": null,
+        "price": 28.99,
+        "compareAtPrice": null,
+        "comparePrice": null,
+        "rating": null,
+        "ratingCount": null,
+        "variants": [
+          {
+            "id": "gid://shopify/ProductVariant/48134269141175",
+            "title": "Kaka Boston Legacy FC Elite WHT - Kids T-Shirt / Tri Black / YXS",
+            "displayName": "Kaka Boston Legacy FC Elite WHT - Kids T-Shirt / Tri Black / YXS",
+            "price": 28.99,
+            "compareAtPrice": null,
+            "comparePrice": null,
+            "currencyCode": null,
+            "availableForSale": true,
+            "selectedOptions": [
+              {
+                "name": "Style",
+                "value": "Kids T-Shirt"
+              },
+              {
+                "name": "Color",
+                "value": "Tri Black"
+              },
+              {
+                "name": "Size",
+                "value": "YXS"
+              }
+            ],
+            "image": "https://cdn.shopify.com/s/files/1/0743/1461/2919/files/71Kx6rgmlRS._SX679_-removebg-preview.png?v=1778047920"
+          },
+          {
+            "id": "gid://shopify/ProductVariant/48134269173943",
+            "title": "Kaka Boston Legacy FC Elite WHT - Kids T-Shirt / Tri Black / YS",
+            "displayName": "Kaka Boston Legacy FC Elite WHT - Kids T-Shirt / Tri Black / YS",
+            "price": 28.99,
+            "compareAtPrice": null,
+            "comparePrice": null,
+            "currencyCode": null,
+            "availableForSale": true,
+            "selectedOptions": [
+              {
+                "name": "Style",
+                "value": "Kids T-Shirt"
+              },
+              {
+                "name": "Color",
+                "value": "Tri Black"
+              },
+              {
+                "name": "Size",
+                "value": "YS"
+              }
+            ],
+            "image": "https://cdn.shopify.com/s/files/1/0743/1461/2919/files/71Kx6rgmlRS._SX679_-removebg-preview.png?v=1778047920"
+          },
+          {
+            "id": "gid://shopify/ProductVariant/48134269206711",
+            "title": "Kaka Boston Legacy FC Elite WHT - Kids T-Shirt / Tri Black / YM",
+            "displayName": "Kaka Boston Legacy FC Elite WHT - Kids T-Shirt / Tri Black / YM",
+            "price": 28.99,
+            "compareAtPrice": null,
+            "comparePrice": null,
+            "currencyCode": null,
+            "availableForSale": true,
+            "selectedOptions": [
+              {
+                "name": "Style",
+                "value": "Kids T-Shirt"
+              },
+              {
+                "name": "Color",
+                "value": "Tri Black"
+              },
+              {
+                "name": "Size",
+                "value": "YM"
+              }
+            ],
+            "image": "https://cdn.shopify.com/s/files/1/0743/1461/2919/files/Kids-T-Shirt-Tri-Black_51447dae-2891-42bd-b8d5-5600014a38f0.jpg?v=1776924675"
+          },
+          {
+            "id": "gid://shopify/ProductVariant/48134269239479",
+            "title": "Kaka Boston Legacy FC Elite WHT - Kids T-Shirt / Tri Black / YL",
+            "displayName": "Kaka Boston Legacy FC Elite WHT - Kids T-Shirt / Tri Black / YL",
+            "price": 28.99,
+            "compareAtPrice": null,
+            "comparePrice": null,
+            "currencyCode": null,
+            "availableForSale": true,
+            "selectedOptions": [
+              {
+                "name": "Style",
+                "value": "Kids T-Shirt"
+              },
+              {
+                "name": "Color",
+                "value": "Tri Black"
+              },
+              {
+                "name": "Size",
+                "value": "YL"
+              }
+            ],
+            "image": "https://cdn.shopify.com/s/files/1/0743/1461/2919/files/Kids-T-Shirt-Tri-Black_51447dae-2891-42bd-b8d5-5600014a38f0.jpg?v=1776924675"
+          },
+          {
+            "id": "gid://shopify/ProductVariant/48134269272247",
+            "title": "Kaka Boston Legacy FC Elite WHT - Kids T-Shirt / Tri Black / YXL",
+            "displayName": "Kaka Boston Legacy FC Elite WHT - Kids T-Shirt / Tri Black / YXL",
+            "price": 28.99,
+            "compareAtPrice": null,
+            "comparePrice": null,
+            "currencyCode": null,
+            "availableForSale": true,
+            "selectedOptions": [
+              {
+                "name": "Style",
+                "value": "Kids T-Shirt"
+              },
+              {
+                "name": "Color",
+                "value": "Tri Black"
+              },
+              {
+                "name": "Size",
+                "value": "YXL"
+              }
+            ],
+            "image": "https://cdn.shopify.com/s/files/1/0743/1461/2919/files/Kids-T-Shirt-Tri-Black_51447dae-2891-42bd-b8d5-5600014a38f0.jpg?v=1776924675"
+          }
+        ]
+      },
+      {
+        "gid": "gid://shopify/Product/8548530487479",
+        "handle": "kaka-boston-legacy-fc-elite-wht-12",
+        "title": "Kaka Boston Legacy FC Elite WHT",
+        "image": "https://cdn.shopify.com/s/files/1/0743/1461/2919/files/3601-Black_4d01b8a5-8803-4443-98ce-dbb128267fcc.jpg?v=1776924684",
+        "onlineStoreUrl": null,
+        "url": null,
+        "vendor": "500 LEVEL",
+        "productType": "Men's Long Sleeve T-Shirt",
+        "tags": [
+          "500 LEVEL",
+          "Shopify Collective"
+        ],
+        "collections": [],
+        "status": "ACTIVE",
+        "available": true,
+        "inventory": 5,
+        "currencyCode": null,
+        "price": 40.99,
+        "compareAtPrice": null,
+        "comparePrice": null,
+        "rating": null,
+        "ratingCount": null,
+        "variants": [
+          {
+            "id": "gid://shopify/ProductVariant/48134286901431",
+            "title": "Kaka Boston Legacy FC Elite WHT - Men's Long Sleeve T-Shirt / Black / S",
+            "displayName": "Kaka Boston Legacy FC Elite WHT - Men's Long Sleeve T-Shirt / Black / S",
+            "price": 40.99,
+            "compareAtPrice": null,
+            "comparePrice": null,
+            "currencyCode": null,
+            "availableForSale": true,
+            "selectedOptions": [
+              {
+                "name": "Style",
+                "value": "Men's Long Sleeve T-Shirt"
+              },
+              {
+                "name": "Color",
+                "value": "Black"
+              },
+              {
+                "name": "Size",
+                "value": "S"
+              }
+            ],
+            "image": ""
+          },
+          {
+            "id": "gid://shopify/ProductVariant/48134286934199",
+            "title": "Kaka Boston Legacy FC Elite WHT - Men's Long Sleeve T-Shirt / Black / M",
+            "displayName": "Kaka Boston Legacy FC Elite WHT - Men's Long Sleeve T-Shirt / Black / M",
+            "price": 40.99,
+            "compareAtPrice": null,
+            "comparePrice": null,
+            "currencyCode": null,
+            "availableForSale": true,
+            "selectedOptions": [
+              {
+                "name": "Style",
+                "value": "Men's Long Sleeve T-Shirt"
+              },
+              {
+                "name": "Color",
+                "value": "Black"
+              },
+              {
+                "name": "Size",
+                "value": "M"
+              }
+            ],
+            "image": ""
+          },
+          {
+            "id": "gid://shopify/ProductVariant/48134286966967",
+            "title": "Kaka Boston Legacy FC Elite WHT - Men's Long Sleeve T-Shirt / Black / L",
+            "displayName": "Kaka Boston Legacy FC Elite WHT - Men's Long Sleeve T-Shirt / Black / L",
+            "price": 40.99,
+            "compareAtPrice": null,
+            "comparePrice": null,
+            "currencyCode": null,
+            "availableForSale": true,
+            "selectedOptions": [
+              {
+                "name": "Style",
+                "value": "Men's Long Sleeve T-Shirt"
+              },
+              {
+                "name": "Color",
+                "value": "Black"
+              },
+              {
+                "name": "Size",
+                "value": "L"
+              }
+            ],
+            "image": ""
+          },
+          {
+            "id": "gid://shopify/ProductVariant/48134286999735",
+            "title": "Kaka Boston Legacy FC Elite WHT - Men's Long Sleeve T-Shirt / Black / XL",
+            "displayName": "Kaka Boston Legacy FC Elite WHT - Men's Long Sleeve T-Shirt / Black / XL",
+            "price": 40.99,
+            "compareAtPrice": null,
+            "comparePrice": null,
+            "currencyCode": null,
+            "availableForSale": true,
+            "selectedOptions": [
+              {
+                "name": "Style",
+                "value": "Men's Long Sleeve T-Shirt"
+              },
+              {
+                "name": "Color",
+                "value": "Black"
+              },
+              {
+                "name": "Size",
+                "value": "XL"
+              }
+            ],
+            "image": ""
+          },
+          {
+            "id": "gid://shopify/ProductVariant/48134287032503",
+            "title": "Kaka Boston Legacy FC Elite WHT - Men's Long Sleeve T-Shirt / Black / 2XL",
+            "displayName": "Kaka Boston Legacy FC Elite WHT - Men's Long Sleeve T-Shirt / Black / 2XL",
+            "price": 43.99,
+            "compareAtPrice": null,
+            "comparePrice": null,
+            "currencyCode": null,
+            "availableForSale": true,
+            "selectedOptions": [
+              {
+                "name": "Style",
+                "value": "Men's Long Sleeve T-Shirt"
+              },
+              {
+                "name": "Color",
+                "value": "Black"
+              },
+              {
+                "name": "Size",
+                "value": "2XL"
+              }
+            ],
+            "image": ""
+          }
+        ]
+      },
+      {
+        "gid": "gid://shopify/Product/8548530553015",
+        "handle": "kaka-boston-legacy-fc-elite-wht-13",
+        "title": "Kaka Boston Legacy FC Elite WHT",
+        "image": "https://cdn.shopify.com/s/files/1/0743/1461/2919/files/Men-Premium-T-Shirt-Tri-Black_a6d781ed-fa5f-44ce-8835-fb0996f3fddb.jpg?v=1776924685",
+        "onlineStoreUrl": null,
+        "url": null,
+        "vendor": "500 LEVEL",
+        "productType": "Men's Premium T-Shirt",
+        "tags": [
+          "500 LEVEL",
+          "Shopify Collective"
+        ],
+        "collections": [],
+        "status": "ACTIVE",
+        "available": true,
+        "inventory": 6,
+        "currencyCode": null,
+        "price": 36.99,
+        "compareAtPrice": null,
+        "comparePrice": null,
+        "rating": null,
+        "ratingCount": null,
+        "variants": [
+          {
+            "id": "gid://shopify/ProductVariant/48134287065271",
+            "title": "Kaka Boston Legacy FC Elite WHT - Men's Premium T-Shirt / Tri Black / S",
+            "displayName": "Kaka Boston Legacy FC Elite WHT - Men's Premium T-Shirt / Tri Black / S",
+            "price": 36.99,
+            "compareAtPrice": null,
+            "comparePrice": null,
+            "currencyCode": null,
+            "availableForSale": true,
+            "selectedOptions": [
+              {
+                "name": "Style",
+                "value": "Men's Premium T-Shirt"
+              },
+              {
+                "name": "Color",
+                "value": "Tri Black"
+              },
+              {
+                "name": "Size",
+                "value": "S"
+              }
+            ],
+            "image": ""
+          },
+          {
+            "id": "gid://shopify/ProductVariant/48134287098039",
+            "title": "Kaka Boston Legacy FC Elite WHT - Men's Premium T-Shirt / Tri Black / M",
+            "displayName": "Kaka Boston Legacy FC Elite WHT - Men's Premium T-Shirt / Tri Black / M",
+            "price": 36.99,
+            "compareAtPrice": null,
+            "comparePrice": null,
+            "currencyCode": null,
+            "availableForSale": true,
+            "selectedOptions": [
+              {
+                "name": "Style",
+                "value": "Men's Premium T-Shirt"
+              },
+              {
+                "name": "Color",
+                "value": "Tri Black"
+              },
+              {
+                "name": "Size",
+                "value": "M"
+              }
+            ],
+            "image": ""
+          },
+          {
+            "id": "gid://shopify/ProductVariant/48134287130807",
+            "title": "Kaka Boston Legacy FC Elite WHT - Men's Premium T-Shirt / Tri Black / L",
+            "displayName": "Kaka Boston Legacy FC Elite WHT - Men's Premium T-Shirt / Tri Black / L",
+            "price": 36.99,
+            "compareAtPrice": null,
+            "comparePrice": null,
+            "currencyCode": null,
+            "availableForSale": true,
+            "selectedOptions": [
+              {
+                "name": "Style",
+                "value": "Men's Premium T-Shirt"
+              },
+              {
+                "name": "Color",
+                "value": "Tri Black"
+              },
+              {
+                "name": "Size",
+                "value": "L"
+              }
+            ],
+            "image": ""
+          },
+          {
+            "id": "gid://shopify/ProductVariant/48134287163575",
+            "title": "Kaka Boston Legacy FC Elite WHT - Men's Premium T-Shirt / Tri Black / XL",
+            "displayName": "Kaka Boston Legacy FC Elite WHT - Men's Premium T-Shirt / Tri Black / XL",
+            "price": 36.99,
+            "compareAtPrice": null,
+            "comparePrice": null,
+            "currencyCode": null,
+            "availableForSale": true,
+            "selectedOptions": [
+              {
+                "name": "Style",
+                "value": "Men's Premium T-Shirt"
+              },
+              {
+                "name": "Color",
+                "value": "Tri Black"
+              },
+              {
+                "name": "Size",
+                "value": "XL"
+              }
+            ],
+            "image": ""
+          },
+          {
+            "id": "gid://shopify/ProductVariant/48134287196343",
+            "title": "Kaka Boston Legacy FC Elite WHT - Men's Premium T-Shirt / Tri Black / 2XL",
+            "displayName": "Kaka Boston Legacy FC Elite WHT - Men's Premium T-Shirt / Tri Black / 2XL",
+            "price": 39.99,
+            "compareAtPrice": null,
+            "comparePrice": null,
+            "currencyCode": null,
+            "availableForSale": true,
+            "selectedOptions": [
+              {
+                "name": "Style",
+                "value": "Men's Premium T-Shirt"
+              },
+              {
+                "name": "Color",
+                "value": "Tri Black"
+              },
+              {
+                "name": "Size",
+                "value": "2XL"
+              }
+            ],
+            "image": ""
+          },
+          {
+            "id": "gid://shopify/ProductVariant/48134287229111",
+            "title": "Kaka Boston Legacy FC Elite WHT - Men's Premium T-Shirt / Tri Black / 3XL",
+            "displayName": "Kaka Boston Legacy FC Elite WHT - Men's Premium T-Shirt / Tri Black / 3XL",
+            "price": 40.99,
+            "compareAtPrice": null,
+            "comparePrice": null,
+            "currencyCode": null,
+            "availableForSale": true,
+            "selectedOptions": [
+              {
+                "name": "Style",
+                "value": "Men's Premium T-Shirt"
+              },
+              {
+                "name": "Color",
+                "value": "Tri Black"
+              },
+              {
+                "name": "Size",
+                "value": "3XL"
+              }
+            ],
+            "image": ""
+          }
+        ]
+      },
+      {
+        "gid": "gid://shopify/Product/8548530618551",
+        "handle": "lais-araujo-boston-legacy-fc-elite-wht-13",
+        "title": "Lais Araujo Boston Legacy FC Elite WHT",
+        "image": "https://cdn.shopify.com/s/files/1/0743/1461/2919/files/KIDS-YOUTH-HOODIE-BLACK_f88a654e-6e0a-40f6-b0f0-1cac106adf9b.jpg?v=1776924687",
+        "onlineStoreUrl": null,
+        "url": null,
+        "vendor": "500 LEVEL",
+        "productType": "Kids Youth Hoodie",
+        "tags": [
+          "500 LEVEL",
+          "Shopify Collective"
+        ],
+        "collections": [],
+        "status": "ACTIVE",
+        "available": true,
+        "inventory": 4,
+        "currencyCode": null,
+        "price": 56.99,
+        "compareAtPrice": null,
+        "comparePrice": null,
+        "rating": null,
+        "ratingCount": null,
+        "variants": [
+          {
+            "id": "gid://shopify/ProductVariant/48134287294647",
+            "title": "Lais Araujo Boston Legacy FC Elite WHT - Kids Youth Hoodie / Black / S",
+            "displayName": "Lais Araujo Boston Legacy FC Elite WHT - Kids Youth Hoodie / Black / S",
+            "price": 56.99,
+            "compareAtPrice": null,
+            "comparePrice": null,
+            "currencyCode": null,
+            "availableForSale": true,
+            "selectedOptions": [
+              {
+                "name": "Style",
+                "value": "Kids Youth Hoodie"
+              },
+              {
+                "name": "Color",
+                "value": "Black"
+              },
+              {
+                "name": "Size",
+                "value": "S"
+              }
+            ],
+            "image": ""
+          },
+          {
+            "id": "gid://shopify/ProductVariant/48134287327415",
+            "title": "Lais Araujo Boston Legacy FC Elite WHT - Kids Youth Hoodie / Black / M",
+            "displayName": "Lais Araujo Boston Legacy FC Elite WHT - Kids Youth Hoodie / Black / M",
+            "price": 56.99,
+            "compareAtPrice": null,
+            "comparePrice": null,
+            "currencyCode": null,
+            "availableForSale": true,
+            "selectedOptions": [
+              {
+                "name": "Style",
+                "value": "Kids Youth Hoodie"
+              },
+              {
+                "name": "Color",
+                "value": "Black"
+              },
+              {
+                "name": "Size",
+                "value": "M"
+              }
+            ],
+            "image": ""
+          },
+          {
+            "id": "gid://shopify/ProductVariant/48134287360183",
+            "title": "Lais Araujo Boston Legacy FC Elite WHT - Kids Youth Hoodie / Black / L",
+            "displayName": "Lais Araujo Boston Legacy FC Elite WHT - Kids Youth Hoodie / Black / L",
+            "price": 56.99,
+            "compareAtPrice": null,
+            "comparePrice": null,
+            "currencyCode": null,
+            "availableForSale": true,
+            "selectedOptions": [
+              {
+                "name": "Style",
+                "value": "Kids Youth Hoodie"
+              },
+              {
+                "name": "Color",
+                "value": "Black"
+              },
+              {
+                "name": "Size",
+                "value": "L"
+              }
+            ],
+            "image": ""
+          },
+          {
+            "id": "gid://shopify/ProductVariant/48134287392951",
+            "title": "Lais Araujo Boston Legacy FC Elite WHT - Kids Youth Hoodie / Black / XL",
+            "displayName": "Lais Araujo Boston Legacy FC Elite WHT - Kids Youth Hoodie / Black / XL",
+            "price": 56.99,
+            "compareAtPrice": null,
+            "comparePrice": null,
+            "currencyCode": null,
+            "availableForSale": true,
+            "selectedOptions": [
+              {
+                "name": "Style",
+                "value": "Kids Youth Hoodie"
+              },
+              {
+                "name": "Color",
+                "value": "Black"
+              },
+              {
+                "name": "Size",
+                "value": "XL"
+              }
+            ],
+            "image": ""
+          }
+        ]
+      }
+    ],
+    "excludedProductGids": [],
+    "selectedRecommendationCount": 4
+    },
+  
+    /**
+     * Fetches product recommendations from the custom API.
+     * @param {string} shopDomain - The Shopify store domain (e.g., 'shop.myshopify.com')
+     * @param {string|number} productId - The ID of the current product
+     * @returns {Promise<Object|null>} - Returns the API response data or null if an error occurs
+     */
+    fetchRecommendations: async function(shopDomain, productId) {
+      /* Commenting out actual fetch for testing
+      if (!shopDomain || !productId) {
+        console.error('Iconic FBT: shopDomain and productId are required to fetch recommendations.');
+        return null;
+      }
+  
+      const baseUrl = 'https://optimize-antibody-contrary-infections.trycloudflare.com/api/recommendation';
+      const url = `${baseUrl}?shop=${encodeURIComponent(shopDomain)}&productId=${encodeURIComponent(productId)}`;
+  
+      try {
+        const response = await fetch(url, {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          }
+        });
+  
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+  
+        const data = await response.json();
+        return data;
+      } catch (error) {
+        console.error('Iconic FBT API Error:', error);
+        return null;
+      }
+      */
+      
+      // Returning dummy data immediately as a resolved Promise
+      return Promise.resolve(this.dummyData);
+    }
+  };
+      const CART_ADD_URL = (window.routes && window.routes.cart_add_url) || '/cart/add.js';
+      const CART_URL = (window.routes && window.routes.cart_url) || '/cart';
+      const DEFAULT_ERROR_MESSAGE = 'Sorry — something went wrong adding items to cart.';
+      /** Only on large viewports: allow "all fit" mode that hides arrows (never on phones / small laptops). */
+      const FBT_SLIDER_DESKTOP_COUNT_MEDIA = '(min-width: 1200px)';
+    
+      function formatMoney(cents, currencySymbol) {
+        if (currencySymbol) return currencySymbol + (cents / 100).toFixed(2);
+        return (cents / 100).toFixed(2);
+      }
+
+      function parseMoneyCents(value) {
+        const n = parseInt(value, 10);
+        return Number.isFinite(n) && n >= 0 ? n : 0;
+      }
+
+      function getFbtSetting(container, key, fallback) {
+        if (container && container.dataset && container.dataset[key] !== undefined) {
+          return container.dataset[key];
+        }
+        const block = container && container.closest ? container.closest('.iconic-block-fbt') : null;
+        if (block && block.dataset && block.dataset[key] !== undefined) {
+          return block.dataset[key];
+        }
+        return fallback;
+      }
+
+      function getBundleListEl(container) {
+        return container.querySelector('.iconic-fbt-list');
+      }
+
+      function getBundleRows(container) {
+        const list = getBundleListEl(container);
+        return list ? Array.from(list.querySelectorAll('.iconic-fbt-row')) : Array.from(container.querySelectorAll('.iconic-fbt-row'));
+      }
+
+      function getBundleRowByIndex(container, idx) {
+        const list = getBundleListEl(container);
+        const root = list || container;
+        return root.querySelector(`.iconic-fbt-row[data-index="${idx}"]`);
+      }
+
+      /** Always read the real checkbox input (avoids stale/wrong nodes if markup varies). */
+      function getRowCheckbox(row) {
+        if (!row) return null;
+        return row.querySelector('input[type="checkbox"][data-fbt-checkbox]');
+      }
+    
+      function getVariantFromRow(row) {
+        const select = row.querySelector('[data-fbt-variant-select]');
+        if (select) {
+          let opt = select.options[select.selectedIndex] || select.options[0];
+          if (opt && opt.value) {
+            return { 
+              id: String(opt.value), 
+              price: parseMoneyCents(opt.dataset.price || '0'), 
+              compareAtPrice: parseMoneyCents(opt.dataset.compareAtPrice || '0'),
+              available: opt.dataset.available !== 'false' 
+            };
+          }
+        }
+        const hidden = row.querySelector('[data-fbt-variant-id]');
+        if (hidden && hidden.value) {
+          return {
+            id: String(hidden.value),
+            price: parseMoneyCents(hidden.dataset.price || '0'),
+            compareAtPrice: parseMoneyCents(hidden.dataset.compareAtPrice || '0'),
+            available: hidden.dataset.available !== 'false'
+          };
+        }
+        if (row.dataset && row.dataset.fbtVariantId) {
+          return {
+            id: String(row.dataset.fbtVariantId),
+            price: parseMoneyCents(row.dataset.price || '0'),
+            compareAtPrice: parseMoneyCents(row.dataset.compareAtPrice || '0'),
+            available: row.dataset.available !== 'false'
+          };
+        }
+        return null;
+      }
+    
+      function setStatus(container, message, type) {
+        const status = container.querySelector('[data-fbt-status]');
+        if (!status) return;
+        const str = (message || '').trim();
+        status.textContent = str;
+        status.dataset.type = str ? (type || '') : '';
+        if (!str) {
+          status.setAttribute('hidden', '');
+        } else {
+          status.removeAttribute('hidden');
+        }
+      }
+  
+      function setBusy(container, isBusy) {
+        const btn = container.querySelector('[data-fbt-add-selected]');
+        if (!btn) return;
+        btn.classList.toggle('is-loading', !!isBusy);
+        btn.disabled = !!isBusy || btn.disabled;
+        btn.setAttribute('aria-busy', isBusy ? 'true' : 'false');
+      }
+
+      function parseDiscountConfig(container) {
+        if (container._iconicFbtDiscountConfig !== undefined) return container._iconicFbtDiscountConfig;
+
+        const script = container.querySelector('[data-fbt-discount-config]');
+        if (!script) {
+          container._iconicFbtDiscountConfig = null;
+          return null;
+        }
+
+        try {
+          let config = JSON.parse(script.textContent || 'null');
+          if (typeof config === 'string' && config.trim()) {
+            config = JSON.parse(config);
+          }
+          if (!config || typeof config !== 'object' || config.globalDiscountEnabled !== true) {
+            container._iconicFbtDiscountConfig = null;
+            return null;
+          }
+          container._iconicFbtDiscountConfig = config;
+          return config;
+        } catch (error) {
+          console.error('Iconic FBT: invalid discount config JSON', error);
+          container._iconicFbtDiscountConfig = null;
+          return null;
+        }
+      }
+
+      function moneyValueToCents(value) {
+        const number = parseFloat(value || 0);
+        if (!Number.isFinite(number) || number <= 0) return 0;
+        return Math.round(number * 100);
+      }
+
+      function getRowIndex(row) {
+        return parseInt(row.getAttribute('data-index') || '0', 10) || 0;
+      }
+
+      function getSelectedBundleRows(container) {
+        return getBundleRows(container).map(row => {
+          const checkbox = getRowCheckbox(row);
+          const variant = getVariantFromRow(row);
+          return {
+            row,
+            checkbox,
+            variant,
+            index: getRowIndex(row),
+            selected: !!(checkbox && checkbox.checked && variant && variant.available)
+          };
+        });
+      }
+
+      function allocateFixedDiscount(rows, discountAmount) {
+        const allocations = new Map();
+        const eligibleRows = rows.filter(item => item.variant && item.variant.price > 0);
+        const eligibleTotal = eligibleRows.reduce((sum, item) => sum + item.variant.price, 0);
+        const cappedDiscount = Math.min(discountAmount, eligibleTotal);
+        let remainingDiscount = cappedDiscount;
+        let remainingTotal = eligibleTotal;
+
+        eligibleRows.forEach((item, index) => {
+          let amount;
+          if (index === eligibleRows.length - 1) {
+            amount = remainingDiscount;
+          } else {
+            amount = Math.round(cappedDiscount * (item.variant.price / eligibleTotal));
+            amount = Math.min(amount, item.variant.price, remainingDiscount);
+          }
+          allocations.set(item.row, Math.max(0, amount));
+          remainingDiscount -= amount;
+          remainingTotal -= item.variant.price;
+        });
+
+        return allocations;
+      }
+
+      function calculateDiscountState(container) {
+        const config = parseDiscountConfig(container);
+        const items = getSelectedBundleRows(container);
+        const selectedItems = items.filter(item => item.selected);
+        const selectedRecommendations = selectedItems.filter(item => item.index > 0);
+        const availableItems = items.filter(item => item.variant && item.variant.available);
+        const baseTotal = selectedItems.reduce((sum, item) => sum + item.variant.price, 0);
+        const originalTotal = selectedItems.reduce((sum, item) => {
+          const compare = item.variant.compareAtPrice > item.variant.price ? item.variant.compareAtPrice : item.variant.price;
+          return sum + compare;
+        }, 0);
+
+        const inactiveState = {
+          active: false,
+          config,
+          allocations: new Map(),
+          baseTotal,
+          discountedTotal: baseTotal,
+          originalTotal,
+          message: ''
+        };
+
+        if (!config) return inactiveState;
+
+        const allowPartial = config.allowPartial !== false;
+        if (!allowPartial && selectedItems.length < availableItems.length) return inactiveState;
+
+        const minimumRecommendations = parseInt(config.minimumRecommendations || '0', 10) || 0;
+        if (selectedRecommendations.length < minimumRecommendations) return inactiveState;
+
+        const minimumBundleValue = moneyValueToCents(config.minimumBundleValue);
+        if (baseTotal < minimumBundleValue) return inactiveState;
+
+        const type = String(config.discountType || '').toUpperCase();
+        let allocations = new Map();
+
+        if (type === 'PERCENTAGE') {
+          const percentage = Math.max(0, Math.min(100, parseFloat(config.discountPercentage || 0) || 0));
+          if (percentage <= 0) return inactiveState;
+          selectedItems.forEach(item => {
+            allocations.set(item.row, Math.round(item.variant.price * (percentage / 100)));
+          });
+        } else if (type === 'FIXED') {
+          const fixedAmount = moneyValueToCents(config.discountAmount);
+          if (fixedAmount <= 0) return inactiveState;
+          allocations = allocateFixedDiscount(selectedItems, fixedAmount);
+        } else if (type === 'CHEAPEST_FREE') {
+          const cheapest = selectedRecommendations
+            .filter(item => item.variant && item.variant.price > 0)
+            .sort((a, b) => a.variant.price - b.variant.price)[0];
+          if (!cheapest) return inactiveState;
+          allocations.set(cheapest.row, cheapest.variant.price);
+        } else {
+          return inactiveState;
+        }
+
+        const discountTotal = Array.from(allocations.values()).reduce((sum, amount) => sum + amount, 0);
+        if (discountTotal <= 0) return inactiveState;
+
+        let message = String(config.discountMessage || '').trim();
+        if (type === 'PERCENTAGE' && config.discountPercentage && !message.includes('%')) {
+          message = message ? `${message} (${config.discountPercentage}% off)` : `${config.discountPercentage}% off`;
+        }
+
+        return {
+          active: true,
+          config,
+          allocations,
+          baseTotal,
+          discountedTotal: Math.max(0, baseTotal - discountTotal),
+          originalTotal: Math.max(originalTotal, baseTotal),
+          message
+        };
+      }
+
+      function updateDiscountMessage(container, discountState) {
+        const messageWrap = container.querySelector('[data-fbt-discount-message]');
+        if (!messageWrap) return;
+
+        const messageText = discountState && discountState.active ? discountState.message : '';
+        if (messageText) {
+          messageWrap.style.removeProperty('display');
+        } else {
+          messageWrap.style.display = 'none';
+        }
+        const paragraph = messageWrap.querySelector('p');
+        if (paragraph) paragraph.textContent = messageText;
+        else messageWrap.textContent = messageText;
+      }
+  
+      function buildPriceHtml(current, original, sym, code, container, options) {
+        options = options || {};
+        const isTotalRow = options.isTotalRow === true;
+        const discountActiveForTotal = options.discountActiveForTotal === true;
+
+        const showSale = getFbtSetting(container, 'showRegularSalePrices', 'true') === 'true';
+        const showCompare = getFbtSetting(container, 'showCompareAtPrices', 'true') === 'true';
+
+        const hasPriceGap = original > current;
+        const bundleStrikeClass =
+          isTotalRow && discountActiveForTotal && hasPriceGap && !showCompare
+            ? ' iconic-fbt-bundle-total-strike'
+            : '';
+
+        const payClass = showSale ? 'iconic-fbt-current-price' : 'iconic-fbt-pay-amount';
+        const saleHtml = `<span class="${payClass}">${formatMoney(current, sym)}${code}</span>`;
+        const compareHtml = `<s class="iconic-fbt-original-price${bundleStrikeClass}">${formatMoney(original, sym)}${code}</s>`;
+
+        let hasCompare = hasPriceGap && showCompare;
+        if (isTotalRow && discountActiveForTotal && hasPriceGap) {
+          hasCompare = true;
+        }
+
+        const themeOrder = getFbtSetting(container, 'priceOrder', 'sale_first') || 'sale_first';
+        const order = isTotalRow ? 'sale_first' : themeOrder;
+
+        if (showSale && !showCompare) {
+          if (isTotalRow && discountActiveForTotal && hasPriceGap) {
+            return saleHtml + compareHtml;
+          }
+          return saleHtml;
+        }
+        if (!showSale && showCompare) {
+          if (!hasCompare) return '';
+          if (order === 'compare_first' && hasCompare) {
+            return compareHtml + saleHtml;
+          }
+          return hasCompare ? (saleHtml + compareHtml) : saleHtml;
+        }
+        if (!showSale && !showCompare) return '';
+
+        if (order === 'compare_first' && hasCompare) {
+          return compareHtml + saleHtml;
+        }
+        return hasCompare ? (saleHtml + compareHtml) : saleHtml;
+      }
+    
+      function updateRowPriceDisplay(row, container, sym, discountState) {
+        const priceEl = row.querySelector('[data-fbt-row-price]');
+        const v = getVariantFromRow(row);
+        if (!priceEl || !v) return;
+    
+        const currencyCode = getFbtSetting(container, 'currencyCode', '');
+        const code = currencyCode ? ` ${currencyCode}` : '';
+        
+        let displayCurrent = v.price;
+        let displayOriginal = v.compareAtPrice > v.price ? v.compareAtPrice : 0;
+
+        if (discountState && discountState.active && discountState.allocations.has(row)) {
+          const discountAmount = discountState.allocations.get(row) || 0;
+          displayCurrent = Math.max(0, v.price - discountAmount);
+          displayOriginal = v.compareAtPrice > v.price ? v.compareAtPrice : v.price;
+        }
+        
+        priceEl.innerHTML = buildPriceHtml(displayCurrent, displayOriginal, sym, code, container);
+      }
+    
+      function handleVariantChangeCore(select, container) {
+        const row = select.closest('.iconic-fbt-row');
+        if (!row) return;
+    
+        const block = container.closest('.iconic-block-fbt');
+        const sym = block ? block.dataset.currencySymbol : '$';
+    
+        const v = getVariantFromRow(row);
+        const cb = getRowCheckbox(row);
+        if (cb && v && v.available === false) {
+          cb.checked = false;
+          cb.disabled = true;
+        } else if (cb && v && v.available === true) {
+          cb.disabled = false;
+        }
+    
+        const opt = select.options[select.selectedIndex];
+        if (opt && opt.dataset.image && opt.dataset.image.trim() !== '') {
+          const idx = row.getAttribute('data-index');
+          if (idx) {
+            const visualItem = container.querySelector(`.iconic-fbt-visual-item[data-fbt-index="${idx}"]`);
+            if (visualItem) {
+              const img = visualItem.querySelector('img');
+              if (img) {
+                img.src = opt.dataset.image;
+                img.removeAttribute('srcset');
+                img.removeAttribute('sizes');
+              }
+            }
+          }
+        }
+    
+        updateTotal(container);
+      }
+    
+      function updateVisualVisibility(container) {
+        const visualRow = container.querySelector('.iconic-fbt-visual-row');
+        if (!visualRow) return;
+    
+        getBundleRows(container).forEach(row => {
+          let idx = row.getAttribute('data-index');
+          let cb = getRowCheckbox(row);
+          let item = visualRow.querySelector(`.iconic-fbt-visual-item[data-fbt-index="${idx}"]`);
+          
+          if (item) {
+            if (cb && cb.checked) {
+              item.style.display = 'flex';
+            } else {
+              item.style.display = 'none';
+            }
+          }
+        });
+    
+        // Show/Hide Pluses
+        visualRow.querySelectorAll('.iconic-fbt-plus').forEach(plus => {
+          let k = parseInt(plus.getAttribute('data-fbt-plus-after'), 10);
+          let rowK = getBundleRowByIndex(container, k);
+          let cbK = rowK ? getRowCheckbox(rowK) : null;
+          
+          let hasLaterChecked = false;
+          getBundleRows(container).forEach(row => {
+            let idx = parseInt(row.getAttribute('data-index'), 10);
+            if (idx > k) {
+              let cb = getRowCheckbox(row);
+              if (cb && cb.checked) hasLaterChecked = true;
+            }
+          });
+    
+          if (cbK && cbK.checked && hasLaterChecked) {
+            plus.style.display = 'inline-flex';
+          } else {
+            plus.style.display = 'none';
+          }
+        });
+
+        updateVisualArrows(container);
+      }
+
+      /** Checked bundle rows that have a matching thumbnail in the visual strip (source of truth for slider threshold). */
+      function countCheckedVisualImages(container) {
+        const visualRow = container.querySelector('.iconic-fbt-visual-row');
+        if (!visualRow) return 0;
+        let n = 0;
+        getBundleRows(container).forEach(function(row) {
+          const cb = getRowCheckbox(row);
+          if (!cb || !cb.checked) return;
+          const idx = row.getAttribute('data-index');
+          if (!idx) return;
+          if (visualRow.querySelector('.iconic-fbt-visual-item[data-fbt-index="' + idx + '"]')) n += 1;
+        });
+        return n;
+      }
+
+      function isVisualItemShown(item) {
+        if (!item) return false;
+        const st = window.getComputedStyle(item);
+        if (st.display === 'none' || st.visibility === 'hidden') return false;
+        const rect = item.getBoundingClientRect();
+        return rect.width > 0 && rect.height > 0;
+      }
+
+      function fbtUseDesktopSliderCountRule(container) {
+        if (container && container.closest('.iconic-block-fbt--product-details')) return false;
+        if (typeof window.matchMedia !== 'function') return true;
+        return window.matchMedia(FBT_SLIDER_DESKTOP_COUNT_MEDIA).matches;
+      }
+
+      function updateVisualArrows(container) {
+        container.querySelectorAll('.iconic-fbt-list-visual-wrap').forEach(function(wrap) {
+          var row = wrap.querySelector('[data-fbt-visual-row]');
+          var prevBtn = wrap.querySelector('.iconic-fbt-list-visual-prev');
+          var nextBtn = wrap.querySelector('.iconic-fbt-list-visual-next');
+          if (!row || !prevBtn || !nextBtn) return;
+
+          function measureAndApply() {
+            var visibleItems = Array.from(row.querySelectorAll('.iconic-fbt-visual-item')).filter(isVisualItemShown);
+            var visibleWidth = visibleItems.reduce(function(total, item) {
+              return total + item.offsetWidth;
+            }, 0);
+            var visiblePluses = Array.from(row.querySelectorAll('.iconic-fbt-plus')).filter(isVisualItemShown);
+            var visiblePlusWidth = visiblePluses.reduce(function(total, plus) {
+              return total + plus.offsetWidth;
+            }, 0);
+            var rowStyles = window.getComputedStyle(row);
+            var gap = parseFloat(rowStyles.columnGap || rowStyles.gap || '0') || 0;
+            var visibleChildrenCount = visibleItems.length + visiblePluses.length;
+            var visibleContentWidth = visibleWidth + visiblePlusWidth + Math.max(0, visibleChildrenCount - 1) * gap;
+            var visibleThumbCount = visibleItems.length;
+            var hasOverflow = visibleContentWidth > row.clientWidth + 1;
+            var maxScroll = hasOverflow ? Math.max(0, Math.floor(row.scrollWidth - row.clientWidth)) : 0;
+
+            /* Large desktop only: ≤4 visible thumbs = no slider (mobile/tablet never hit by media query). */
+            var sliderDisabled = fbtUseDesktopSliderCountRule(wrap) && visibleThumbCount <= 4;
+
+            var topWrapper = wrap.closest('.iconic-fbt-top-wrapper');
+
+            if (sliderDisabled) {
+              row.scrollLeft = 0;
+              prevBtn.style.display = 'none';
+              nextBtn.style.display = 'none';
+              prevBtn.disabled = true;
+              nextBtn.disabled = true;
+              row.dataset.sliderDisabled = 'true';
+              row.classList.remove('is-dragging');
+              if (topWrapper) topWrapper.classList.add('iconic-fbt-top-wrapper--strip-fit-all');
+            } else {
+              if (topWrapper) topWrapper.classList.remove('iconic-fbt-top-wrapper--strip-fit-all');
+              if (row.scrollLeft > maxScroll) row.scrollLeft = maxScroll;
+              var scrollLeft = Math.ceil(row.scrollLeft);
+              prevBtn.style.display = '';
+              nextBtn.style.display = '';
+              prevBtn.disabled = scrollLeft <= 0;
+              nextBtn.disabled = !hasOverflow || maxScroll <= 1 || scrollLeft >= maxScroll - 1;
+              row.dataset.sliderDisabled = 'false';
+            }
+          }
+
+          requestAnimationFrame(function() {
+            requestAnimationFrame(measureAndApply);
+          });
+        });
+      }
+    
+      function updateTotal(container) {
+        const totalEl = container.querySelector('[data-fbt-total]');
+        const originalTotalEl = container.querySelector('[data-fbt-original-total]');
+        const btn = container.querySelector('[data-fbt-add-selected]');
+        if (!totalEl) return;
+
+        const sym = container.closest('.iconic-block-fbt').dataset.currencySymbol;
+        const currencyCode = getFbtSetting(container, 'currencyCode', '');
+        const code = currencyCode ? ` ${currencyCode}` : '';
+        const discountState = calculateDiscountState(container);
+        updateDiscountMessage(container, discountState);
+        getBundleRows(container).forEach(row => {
+          updateRowPriceDisplay(row, container, sym, discountState);
+        });
+
+        const total = discountState.baseTotal;
+        const originalTotal = discountState.originalTotal;
+        const discountedTotal = discountState.discountedTotal;
+        const anySelected = total > 0;
+        
+        const showSale = getFbtSetting(container, 'showRegularSalePrices', 'true') === 'true';
+        const showCompare = getFbtSetting(container, 'showCompareAtPrices', 'true') === 'true';
+        const totalWrap = container.querySelector('.iconic-fbt-total-wrap');
+
+        if (!showSale && !showCompare) {
+          if (totalWrap) totalWrap.style.display = 'none';
+          if (btn) btn.disabled = !anySelected || total <= 0;
+          updateVisualVisibility(container);
+          return;
+        }
+
+        if (totalWrap) totalWrap.style.display = '';
+
+        let displayOriginalTotal = 0;
+        if (discountState.active) {
+          displayOriginalTotal = Math.max(originalTotal, total);
+        } else if (originalTotal > total) {
+          displayOriginalTotal = originalTotal;
+        }
+
+        const hasCompareForTotal = showCompare && displayOriginalTotal > discountedTotal;
+
+        const savingsEl = container.querySelector('[data-fbt-savings]');
+
+        if (originalTotalEl) originalTotalEl.style.display = 'none';
+
+        const totalPriceOptions = { isTotalRow: true, discountActiveForTotal: discountState.active };
+
+        if (showSale && !showCompare) {
+          totalEl.innerHTML = buildPriceHtml(discountedTotal, displayOriginalTotal, sym, code, container, totalPriceOptions);
+        } else if (!showSale && showCompare) {
+          totalEl.innerHTML = hasCompareForTotal ? buildPriceHtml(discountedTotal, displayOriginalTotal, sym, code, container, totalPriceOptions) : '';
+        } else {
+          totalEl.innerHTML = buildPriceHtml(discountedTotal, displayOriginalTotal, sym, code, container, totalPriceOptions);
+        }
+
+        if (savingsEl) {
+          const diff = displayOriginalTotal - discountedTotal;
+          const showSavings =
+            diff > 0 &&
+            (discountState.active || (showCompare && displayOriginalTotal > discountedTotal));
+          if (showSavings) {
+            savingsEl.textContent = `You Save ${formatMoney(diff, sym)}${code}`;
+            savingsEl.style.display = '';
+          } else {
+            savingsEl.style.display = 'none';
+          }
+        }
+
+        if (btn) btn.disabled = !anySelected || total <= 0;
+        updateVisualVisibility(container);
+      }
+
+      /**
+       * Recompute totals/discount from the live DOM (no cached selection).
+       * Multiple passes catch themes that toggle the checkbox after our first read.
+       */
+      function scheduleUpdateTotalFromCheckbox(container) {
+        updateTotal(container);
+        requestAnimationFrame(function() {
+          updateTotal(container);
+          setTimeout(function() {
+            updateTotal(container);
+          }, 0);
+        });
+      }
+    
+      function initMouseDrag(container) {
+        const slider = container.querySelector('.iconic-fbt-visual-row');
+        if (!slider || slider.dataset.dragInit) return;
+        slider.dataset.dragInit = 'true';
+    
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+    
+        slider.addEventListener('mousedown', (e) => {
+          if (slider.dataset.sliderDisabled === 'true') return;
+          isDown = true;
+          slider.classList.add('is-dragging');
+          startX = e.pageX - slider.offsetLeft;
+          scrollLeft = slider.scrollLeft;
+        });
+    
+        slider.addEventListener('mouseleave', () => {
+          isDown = false;
+          slider.classList.remove('is-dragging');
+        });
+    
+        slider.addEventListener('mouseup', () => {
+          isDown = false;
+          slider.classList.remove('is-dragging');
+        });
+    
+        slider.addEventListener('mousemove', (e) => {
+          if (!isDown) return;
+          e.preventDefault();
+          const x = e.pageX - slider.offsetLeft;
+          const walk = (x - startX) * 2; // the multiplier controls scroll speed
+          slider.scrollLeft = scrollLeft - walk;
+        });
+      }
+    
+      function ensureFbtGlobalResizeListener() {
+        if (window.__iconicFbtGlobalResizeBound) return;
+        window.__iconicFbtGlobalResizeBound = true;
+        window.addEventListener('resize', function () {
+          if (window.__iconicFbtResizeRaf) cancelAnimationFrame(window.__iconicFbtResizeRaf);
+          window.__iconicFbtResizeRaf = requestAnimationFrame(function () {
+            document.querySelectorAll('[data-iconic-fbt]').forEach(function (el) {
+              if (el.dataset.iconicFbtBound === 'true') updateVisualArrows(el);
+            });
+          });
+        });
+      }
+
+      function initListVisualArrows(container) {
+        ensureFbtGlobalResizeListener();
+        container.querySelectorAll('.iconic-fbt-list-visual-wrap').forEach(function(wrap) {
+          if (wrap.dataset.arrowsInit) return;
+          wrap.dataset.arrowsInit = 'true';
+          
+          var row = wrap.querySelector('[data-fbt-visual-row]');
+          var prevBtn = wrap.querySelector('.iconic-fbt-list-visual-prev');
+          var nextBtn = wrap.querySelector('.iconic-fbt-list-visual-next');
+          if (!row || !prevBtn || !nextBtn) return;
+    
+          function updateArrowState() {
+            updateVisualArrows(container);
+          }
+    
+          var scrollStep = function () {
+            return Math.max(120, row.clientWidth * 0.8);
+          };
+    
+          prevBtn.addEventListener('click', function () {
+            if (row.dataset.sliderDisabled === 'true') return;
+            row.scrollBy({ left: -scrollStep(), behavior: 'smooth' });
+          });
+          nextBtn.addEventListener('click', function () {
+            if (row.dataset.sliderDisabled === 'true') return;
+            row.scrollBy({ left: scrollStep(), behavior: 'smooth' });
+          });
+    
+          row.addEventListener('scroll', updateArrowState);
+    
+          setTimeout(updateArrowState, 100);
+        });
+      }
+    
+      function bindFbt(container) {
+        const sym = container.closest('.iconic-block-fbt').dataset.currencySymbol;
+        if (container.dataset.iconicFbtBound) {
+          updateTotal(container);
+          return;
+        }
+        container.dataset.iconicFbtBound = 'true';
+    
+        setStatus(container, '', '');
+
+        // FIX: Recalculate total on init so ALL checked products are included immediately.
+        updateTotal(container);
+    
+        // Use event delegation for variant select changes (works for dynamically added elements)
+        
+        // Helper function to handle variant change
+        const handleVariantChange = (select) => {
+          handleVariantChangeCore(select, container);
+        };
+        
+        // Method 1: Direct listeners on existing selects
+        container.querySelectorAll('[data-fbt-variant-select]').forEach(select => {
+          select.addEventListener('change', e => handleVariantChange(e.target, e));
+        });
+        
+        // Method 2: Container delegation as backup
+        container.addEventListener('change', e => {
+          if (e.target && e.target.matches && e.target.matches('[data-fbt-variant-select]')) {
+            handleVariantChange(e.target, e);
+          }
+        });
+        
+    
+        // Checkbox / bundle selection: always read live DOM; multi-pass + label click for flaky themes.
+        function onCheckboxDelegatedEvent(e) {
+          const tgt = e.target;
+          if (!tgt || !tgt.matches) return;
+          if (tgt.matches('input[type="checkbox"][data-fbt-checkbox]')) {
+            scheduleUpdateTotalFromCheckbox(container);
+          }
+        }
+
+        container.addEventListener('change', onCheckboxDelegatedEvent);
+        container.addEventListener('input', onCheckboxDelegatedEvent);
+
+        container.addEventListener('click', function onFbtCheckboxWrapClick(e) {
+          if (!e.target.closest || !e.target.closest('.iconic-fbt-list')) return;
+          if (!e.target.closest('.iconic-fbt-checkbox-wrap')) return;
+          if (e.target.closest('.iconic-fbt-product-title-link')) return;
+          requestAnimationFrame(function() {
+            requestAnimationFrame(function() {
+              scheduleUpdateTotalFromCheckbox(container);
+            });
+          });
+        });
+    
+        const addBtn = container.querySelector('[data-fbt-add-selected]');
+        if (addBtn) {
+          addBtn.addEventListener('click', () => {
+            if (addBtn.disabled) return;
+            setStatus(container, '', '');
+            const items = [];
+            getBundleRows(container).forEach(row => {
+              const cb = getRowCheckbox(row);
+              const v = getVariantFromRow(row);
+              if (cb && cb.checked && v && v.id && v.available) items.push({ id: String(v.id), quantity: 1 });
+            });
+            
+            if (items.length === 0) return;
+            setBusy(container, true);
+    
+            function addNext(index) {
+              if (index >= items.length) {
+                window.location.href = CART_URL;
+                return;
+              }
+              let body = new FormData();
+              body.append('id', String(items[index].id));
+              body.append('quantity', '1');
+    
+              fetch(CART_ADD_URL, { method: 'POST', body: body, headers: { 'X-Requested-With': 'XMLHttpRequest' } })
+                .then(() => addNext(index + 1))
+                .catch(() => {
+                  setStatus(container, DEFAULT_ERROR_MESSAGE, 'error');
+                  setBusy(container, false);
+                });
+            }
+            addNext(0);
+          });
+        }
+        updateTotal(container);
+        initMouseDrag(container);
+        initListVisualArrows(container);
+      }
+    
+      function escapeHtml(unsafe) {
+        return (unsafe || '').toString().replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+      }
+  
+      function truncateText(text, maxLength) {
+        const len = parseInt(maxLength, 10) || 100;
+        const str = String(text || '');
+        if (str.length <= len) return str;
+        return str.substring(0, len) + '...';
+      }
+
+      function renderRatingStars(ratingValue, icon) {
+        const parsed = parseFloat(ratingValue);
+        const rating = Number.isFinite(parsed) ? Math.max(0, Math.min(5, parsed)) : 0;
+        const displayRating = rating.toFixed(1);
+        const star = escapeHtml(icon || '\u2605');
+        const stars = star.repeat(5);
+        const fillPercent = Math.round(rating * 20 * 10) / 10;
+
+        return `<span class="iconic-fbt-rating-stars" role="img" aria-label="${displayRating} out of 5 stars"><span class="iconic-fbt-rating-empty" aria-hidden="true">${stars}</span><span class="iconic-fbt-rating-filled" aria-hidden="true" style="width: ${fillPercent}%;">${stars}</span></span><span class="iconic-fbt-rating-value">${displayRating}</span>`;
+      }
+
+      /** Canonical PDP URL from Storefront-style recommendation payload. */
+      function getProductPageUrl(product) {
+        if (!product) return '#';
+        const direct = product.url || product.onlineStoreUrl;
+        if (direct && String(direct).trim()) return String(direct).trim();
+        const h = product.handle && String(product.handle).trim();
+        if (h) return '/products/' + h;
+        return '#';
+      }
+  
+      async function fetchRecommendations() {
+        const containers = document.querySelectorAll('[data-iconic-fbt][data-fbt-source="api"]');
+        for (const container of containers) {
+          if (container.dataset.fetched) continue;
+          container.dataset.fetched = 'true';
+
+          const shop =
+            (container.dataset && container.dataset.fbtShop) ||
+            (window.IconicFbtSettings && window.IconicFbtSettings.shop) ||
+            '';
+          const productId =
+            (container.dataset && container.dataset.fbtProductId) ||
+            (window.IconicFbtSettings && window.IconicFbtSettings.productId) ||
+            '';
+          const sym = container.closest('.iconic-block-fbt').dataset.currencySymbol || '$';
+          
+          if (!IconicFbtApi) {
+            container.style.opacity = '1';
+            return;
+          }
+          
+          try {
+            const data = await IconicFbtApi.fetchRecommendations(shop, productId);
+            if (data && data.recommendationProducts && data.recommendationProducts.length > 0) {
+              const visualRow = container.querySelector('.iconic-fbt-visual-row');
+              const listRow = container.querySelector('.iconic-fbt-list');
+              
+              const mainRow = listRow ? listRow.querySelector('.iconic-fbt-row[data-index="0"]') : null;
+              const mainRating = mainRow ? parseFloat(mainRow.getAttribute('data-rating')) || 0 : 0;
+              
+              let anyProductHasReviews = mainRating > 0;
+              data.recommendationProducts.forEach((product) => {
+                const ratingVal = product.rating ? parseFloat(product.rating) : 0;
+                if (ratingVal > 0) anyProductHasReviews = true;
+              });
+
+              if (mainRow) {
+                const mainReviewWrap = mainRow.querySelector('.iconic-fbt-reviews');
+                if (mainReviewWrap) {
+                  if (anyProductHasReviews) {
+                    mainReviewWrap.style.removeProperty('display');
+                  } else {
+                    mainReviewWrap.style.display = 'none';
+                  }
+                }
+              }
+              const blockNode = container.closest('.iconic-block-fbt');
+              const maxLength = blockNode ? blockNode.dataset.fbtProductNameMaxLength : undefined;
+
+              data.recommendationProducts.forEach((product, i) => {
+                const index = i + 1; // 0 is main product
+                const priceCents = Math.round(product.price * 100);
+                
+                // Visual Row
+                if (visualRow) {
+                  const plus = document.createElement('span');
+                  plus.className = 'iconic-fbt-plus';
+                  plus.setAttribute('data-fbt-plus-after', String(index - 1));
+                  plus.textContent = '+';
+                  visualRow.appendChild(plus);
+                  
+                  const visualItem = document.createElement('div');
+                  visualItem.className = 'iconic-fbt-visual-item';
+                  visualItem.setAttribute('data-fbt-index', String(index));
+                  const firstVariantImage = product.variants && product.variants[0] && product.variants[0].image ? product.variants[0].image : product.image;
+                  visualItem.innerHTML = `<img src="${escapeHtml(firstVariantImage)}" alt="${escapeHtml(truncateText(product.title, maxLength))}" loading="lazy" class="iconic-top-img iconic-d-block iconic-w-100 iconic-h-100 iconic-mw-100">`;
+                  visualRow.appendChild(visualItem);
+                }
+  
+                // List Row
+                if (listRow) {
+                  const row = document.createElement('div');
+                  row.className = 'iconic-fbt-row';
+                  row.setAttribute('data-fbt-row', '');
+                  row.setAttribute('data-index', String(index));
+  
+                  let variantsHtml = '';
+                  if (product.variants && product.variants.length > 1) {
+                    variantsHtml = `<select class="iconic-fbt-variant-select" data-fbt-variant-select>`;
+                    product.variants.forEach((v, vIdx) => {
+                      const vId = v.id.split('/').pop();
+                      const vPrice = Math.round(v.price * 100);
+                      const vCompareAt = v.compareAtPrice ? Math.round(v.compareAtPrice * 100) : 0;
+                      const vImage = v.image || product.image || '';
+                      variantsHtml += `<option value="${vId}" data-price="${vPrice}" data-compare-at-price="${vCompareAt}" data-available="${v.availableForSale}" data-image="${escapeHtml(vImage)}">${escapeHtml(truncateText(v.title, maxLength))}</option>`;
+                    });
+                    variantsHtml += `</select>`;
+                  } else if (product.variants && product.variants.length === 1) {
+                    const v = product.variants[0];
+                    const vId = v.id.split('/').pop();
+                    const vPrice = Math.round(v.price * 100);
+                    const vCompareAt = v.compareAtPrice ? Math.round(v.compareAtPrice * 100) : 0;
+                    variantsHtml = `<input type="hidden" data-fbt-variant-id value="${vId}" data-price="${vPrice}" data-compare-at-price="${vCompareAt}" data-available="${v.availableForSale}">`;
+                  }
+  
+                  let reviewsHtml = '';
+                  const showReviews = blockNode && blockNode.dataset.showReviews === 'true';
+                  const ratingVal = product.rating ? parseFloat(product.rating) : 0.0;
+                  const ratingCount = product.ratingCount || 0;
+                  if (showReviews && anyProductHasReviews) {
+                    const iconFilled = (blockNode && blockNode.dataset.fbtRatingIconDefault) || '★';
+                    const showReviewCount = blockNode && blockNode.dataset.fbtShowReviewCount === 'true';
+                    const starsHtml = renderRatingStars(ratingVal, iconFilled);
+                    const countHtml = showReviewCount ? ` <span class="iconic-fbt-review-count">(${ratingCount} reviews)</span>` : '';
+                    reviewsHtml = `<div class="iconic-fbt-reviews">${starsHtml}${countHtml}</div>`;
+                  }
+  
+                  const productUrl = getProductPageUrl(product);
+                  const blockId =
+                    (container.dataset && container.dataset.fbtBlockId) ||
+                    'fbt-' + Math.random().toString(36).slice(2, 10);
+                  const cbDomId = 'iconic-fbt-cb-' + blockId + '-' + index;
+
+                  row.innerHTML = `
+                    <div class="iconic-fbt-checkbox-wrap">
+                      <label class="iconic-fbt-checkbox-label" for="${escapeHtml(cbDomId)}">
+                        <input id="${escapeHtml(cbDomId)}" type="checkbox" class="iconic-fbt-checkbox" data-fbt-checkbox ${product.available ? 'checked' : 'disabled'}>
+                      </label>
+                      <span class="iconic-fbt-row-label"><a href="${escapeHtml(productUrl)}" class="iconic-fbt-product-title-link">${escapeHtml(truncateText(product.title, maxLength))}</a></span>
+                    </div>
+                    ${variantsHtml}
+                    <div class="iconic-fbt-price-review-wrap">
+                      <div class="iconic-fbt-row-price" data-fbt-row-price>
+                        ${(() => {
+                          const pCompareAt = product.compareAtPrice ? Math.round(product.compareAtPrice * 100) : 0;
+                          let displayCurrent = priceCents;
+                          let displayOriginal = pCompareAt > priceCents ? pCompareAt : 0;
+                          const dynamicCurrencyCode = getFbtSetting(container, 'currencyCode', '');
+                          const code = dynamicCurrencyCode ? ' ' + dynamicCurrencyCode : '';
+                          return buildPriceHtml(displayCurrent, displayOriginal, sym, code, container);
+                        })()}
+                      </div>
+                      ${reviewsHtml}
+                    </div>
+                  `;
+                  listRow.appendChild(row);
+                }
+              });
+            }
+          } catch (e) {
+            console.error('Error fetching FBT recommendations from API:', e);
+          }
+          
+          bindFbt(container);
+          // FIX: Force total recalculation after all API rows are injected and bound.
+          // This guarantees the total shows all products on first render.
+          updateTotal(container);
+          container.style.opacity = '1';
+        }
+      }
+    
+      function initLayoutDetection() {
+        document.querySelectorAll('.iconic-block-fbt').forEach(function(block) {
+          if (!block.classList.contains('iconic-block-fbt--product-details')) {
+            var isProductInfo = block.closest('.product__info-container, .product-info, .product-details-wrapper, .product-form, [id*="ProductInfo"], .product__column--info, form[action*="/cart/add"]');
+            if (isProductInfo) {
+              block.classList.add('iconic-block-fbt--product-details');
+            }
+          }
+        });
+      }
+
+      function init() {
+        initLayoutDetection();
+        if (typeof window.matchMedia === 'function' && !window.__iconicFbtSliderMqlBound) {
+          window.__iconicFbtSliderMqlBound = true;
+          var mql = window.matchMedia(FBT_SLIDER_DESKTOP_COUNT_MEDIA);
+          var onViewportSliderModeChange = function() {
+            document.querySelectorAll('[data-iconic-fbt]').forEach(function(el) {
+              if (el.dataset.iconicFbtBound === 'true') updateVisualArrows(el);
+            });
+          };
+          if (mql.addEventListener) mql.addEventListener('change', onViewportSliderModeChange);
+          else if (mql.addListener) mql.addListener(onViewportSliderModeChange);
+        }
+
+        // Bind only custom ones initially. API ones are bound after rendering.
+        document.querySelectorAll('[data-iconic-fbt][data-fbt-source="custom"]').forEach(el => {
+          bindFbt(el);
+        });
+        fetchRecommendations();
+      }
+    
+      if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+      else init();
+    
+      // Global safety-net: checkbox change (capture) so discount recalculates even if bubble is stopped.
+      if (!window.__iconicFbtCheckboxCaptureBound) {
+        window.__iconicFbtCheckboxCaptureBound = true;
+        document.addEventListener(
+          'change',
+          function iconicFbtGlobalCheckboxSync(e) {
+            if (!e.target || !e.target.matches('input[type="checkbox"][data-fbt-checkbox]')) return;
+            const widget = e.target.closest('[data-iconic-fbt]');
+            if (!widget || widget.dataset.iconicFbtBound !== 'true') return;
+            scheduleUpdateTotalFromCheckbox(widget);
+          },
+          true
+        );
+      }
+
+      // Global safety-net handler for variant select changes
+      // (backup in case bindFbt's direct/delegated listeners are blocked by other scripts)
+      document.addEventListener('change', function(e) {
+        if (!e.target || !e.target.hasAttribute('data-fbt-variant-select')) return;
+        const select = e.target;
+        const container = select.closest('[data-iconic-fbt]');
+        if (!container || container.dataset.iconicFbtBound !== 'true') return;
+        const row = select.closest('.iconic-fbt-row');
+        if (!row) return;
+        handleVariantChangeCore(select, container);
+      });
+    })();
