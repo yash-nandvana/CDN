@@ -2,666 +2,53 @@
 
 (function () {
   const IconicFbtApi = {
-    dummyData: {
-    "widgetDisabled": false,
-    "recommendationAlgorithm": "standard",
-    "recommendationSource": "mixed",
-    "recommendationProductGids": [
-      "gid://shopify/Product/8548530225335",
-      "gid://shopify/Product/8548530487479",
-      "gid://shopify/Product/8548530553015",
-      "gid://shopify/Product/8548530618551"
-    ],
-    "recommendationProducts": [
-      {
-        "gid": "gid://shopify/Product/8548530225335",
-        "handle": "kaka-boston-legacy-fc-elite-wht-8",
-        "title": "Kaka Boston Legacy FC Elite WHT",
-        "image": "https://cdn.shopify.com/s/files/1/0743/1461/2919/files/Kids-T-Shirt-Tri-Black_51447dae-2891-42bd-b8d5-5600014a38f0.jpg?v=1776924675",
-        "onlineStoreUrl": null,
-        "url": null,
-        "vendor": "500 LEVEL",
-        "productType": "Kids T-Shirt",
-        "tags": [
-          "500 LEVEL",
-          "Shopify Collective"
-        ],
-        "collections": [],
-        "status": "ACTIVE",
-        "available": true,
-        "inventory": 5,
-        "currencyCode": null,
-        "price": 28.99,
-        "compareAtPrice": null,
-        "comparePrice": null,
-        "rating": null,
-        "ratingCount": null,
-        "variants": [
-          {
-            "id": "gid://shopify/ProductVariant/48134269141175",
-            "title": "Kaka Boston Legacy FC Elite WHT - Kids T-Shirt / Tri Black / YXS",
-            "displayName": "Kaka Boston Legacy FC Elite WHT - Kids T-Shirt / Tri Black / YXS",
-            "price": 28.99,
-            "compareAtPrice": null,
-            "comparePrice": null,
-            "currencyCode": null,
-            "availableForSale": true,
-            "selectedOptions": [
-              {
-                "name": "Style",
-                "value": "Kids T-Shirt"
-              },
-              {
-                "name": "Color",
-                "value": "Tri Black"
-              },
-              {
-                "name": "Size",
-                "value": "YXS"
-              }
-            ],
-            "image": "https://cdn.shopify.com/s/files/1/0743/1461/2919/files/71Kx6rgmlRS._SX679_-removebg-preview.png?v=1778047920"
-          },
-          {
-            "id": "gid://shopify/ProductVariant/48134269173943",
-            "title": "Kaka Boston Legacy FC Elite WHT - Kids T-Shirt / Tri Black / YS",
-            "displayName": "Kaka Boston Legacy FC Elite WHT - Kids T-Shirt / Tri Black / YS",
-            "price": 28.99,
-            "compareAtPrice": null,
-            "comparePrice": null,
-            "currencyCode": null,
-            "availableForSale": true,
-            "selectedOptions": [
-              {
-                "name": "Style",
-                "value": "Kids T-Shirt"
-              },
-              {
-                "name": "Color",
-                "value": "Tri Black"
-              },
-              {
-                "name": "Size",
-                "value": "YS"
-              }
-            ],
-            "image": "https://cdn.shopify.com/s/files/1/0743/1461/2919/files/71Kx6rgmlRS._SX679_-removebg-preview.png?v=1778047920"
-          },
-          {
-            "id": "gid://shopify/ProductVariant/48134269206711",
-            "title": "Kaka Boston Legacy FC Elite WHT - Kids T-Shirt / Tri Black / YM",
-            "displayName": "Kaka Boston Legacy FC Elite WHT - Kids T-Shirt / Tri Black / YM",
-            "price": 28.99,
-            "compareAtPrice": null,
-            "comparePrice": null,
-            "currencyCode": null,
-            "availableForSale": true,
-            "selectedOptions": [
-              {
-                "name": "Style",
-                "value": "Kids T-Shirt"
-              },
-              {
-                "name": "Color",
-                "value": "Tri Black"
-              },
-              {
-                "name": "Size",
-                "value": "YM"
-              }
-            ],
-            "image": "https://cdn.shopify.com/s/files/1/0743/1461/2919/files/Kids-T-Shirt-Tri-Black_51447dae-2891-42bd-b8d5-5600014a38f0.jpg?v=1776924675"
-          },
-          {
-            "id": "gid://shopify/ProductVariant/48134269239479",
-            "title": "Kaka Boston Legacy FC Elite WHT - Kids T-Shirt / Tri Black / YL",
-            "displayName": "Kaka Boston Legacy FC Elite WHT - Kids T-Shirt / Tri Black / YL",
-            "price": 28.99,
-            "compareAtPrice": null,
-            "comparePrice": null,
-            "currencyCode": null,
-            "availableForSale": true,
-            "selectedOptions": [
-              {
-                "name": "Style",
-                "value": "Kids T-Shirt"
-              },
-              {
-                "name": "Color",
-                "value": "Tri Black"
-              },
-              {
-                "name": "Size",
-                "value": "YL"
-              }
-            ],
-            "image": "https://cdn.shopify.com/s/files/1/0743/1461/2919/files/Kids-T-Shirt-Tri-Black_51447dae-2891-42bd-b8d5-5600014a38f0.jpg?v=1776924675"
-          },
-          {
-            "id": "gid://shopify/ProductVariant/48134269272247",
-            "title": "Kaka Boston Legacy FC Elite WHT - Kids T-Shirt / Tri Black / YXL",
-            "displayName": "Kaka Boston Legacy FC Elite WHT - Kids T-Shirt / Tri Black / YXL",
-            "price": 28.99,
-            "compareAtPrice": null,
-            "comparePrice": null,
-            "currencyCode": null,
-            "availableForSale": true,
-            "selectedOptions": [
-              {
-                "name": "Style",
-                "value": "Kids T-Shirt"
-              },
-              {
-                "name": "Color",
-                "value": "Tri Black"
-              },
-              {
-                "name": "Size",
-                "value": "YXL"
-              }
-            ],
-            "image": "https://cdn.shopify.com/s/files/1/0743/1461/2919/files/Kids-T-Shirt-Tri-Black_51447dae-2891-42bd-b8d5-5600014a38f0.jpg?v=1776924675"
-          }
-        ]
-      },
-      {
-        "gid": "gid://shopify/Product/8548530487479",
-        "handle": "kaka-boston-legacy-fc-elite-wht-12",
-        "title": "Kaka Boston Legacy FC Elite WHT",
-        "image": "https://cdn.shopify.com/s/files/1/0743/1461/2919/files/3601-Black_4d01b8a5-8803-4443-98ce-dbb128267fcc.jpg?v=1776924684",
-        "onlineStoreUrl": null,
-        "url": null,
-        "vendor": "500 LEVEL",
-        "productType": "Men's Long Sleeve T-Shirt",
-        "tags": [
-          "500 LEVEL",
-          "Shopify Collective"
-        ],
-        "collections": [],
-        "status": "ACTIVE",
-        "available": true,
-        "inventory": 5,
-        "currencyCode": null,
-        "price": 40.99,
-        "compareAtPrice": null,
-        "comparePrice": null,
-        "rating": null,
-        "ratingCount": null,
-        "variants": [
-          {
-            "id": "gid://shopify/ProductVariant/48134286901431",
-            "title": "Kaka Boston Legacy FC Elite WHT - Men's Long Sleeve T-Shirt / Black / S",
-            "displayName": "Kaka Boston Legacy FC Elite WHT - Men's Long Sleeve T-Shirt / Black / S",
-            "price": 40.99,
-            "compareAtPrice": null,
-            "comparePrice": null,
-            "currencyCode": null,
-            "availableForSale": true,
-            "selectedOptions": [
-              {
-                "name": "Style",
-                "value": "Men's Long Sleeve T-Shirt"
-              },
-              {
-                "name": "Color",
-                "value": "Black"
-              },
-              {
-                "name": "Size",
-                "value": "S"
-              }
-            ],
-            "image": ""
-          },
-          {
-            "id": "gid://shopify/ProductVariant/48134286934199",
-            "title": "Kaka Boston Legacy FC Elite WHT - Men's Long Sleeve T-Shirt / Black / M",
-            "displayName": "Kaka Boston Legacy FC Elite WHT - Men's Long Sleeve T-Shirt / Black / M",
-            "price": 40.99,
-            "compareAtPrice": null,
-            "comparePrice": null,
-            "currencyCode": null,
-            "availableForSale": true,
-            "selectedOptions": [
-              {
-                "name": "Style",
-                "value": "Men's Long Sleeve T-Shirt"
-              },
-              {
-                "name": "Color",
-                "value": "Black"
-              },
-              {
-                "name": "Size",
-                "value": "M"
-              }
-            ],
-            "image": ""
-          },
-          {
-            "id": "gid://shopify/ProductVariant/48134286966967",
-            "title": "Kaka Boston Legacy FC Elite WHT - Men's Long Sleeve T-Shirt / Black / L",
-            "displayName": "Kaka Boston Legacy FC Elite WHT - Men's Long Sleeve T-Shirt / Black / L",
-            "price": 40.99,
-            "compareAtPrice": null,
-            "comparePrice": null,
-            "currencyCode": null,
-            "availableForSale": true,
-            "selectedOptions": [
-              {
-                "name": "Style",
-                "value": "Men's Long Sleeve T-Shirt"
-              },
-              {
-                "name": "Color",
-                "value": "Black"
-              },
-              {
-                "name": "Size",
-                "value": "L"
-              }
-            ],
-            "image": ""
-          },
-          {
-            "id": "gid://shopify/ProductVariant/48134286999735",
-            "title": "Kaka Boston Legacy FC Elite WHT - Men's Long Sleeve T-Shirt / Black / XL",
-            "displayName": "Kaka Boston Legacy FC Elite WHT - Men's Long Sleeve T-Shirt / Black / XL",
-            "price": 40.99,
-            "compareAtPrice": null,
-            "comparePrice": null,
-            "currencyCode": null,
-            "availableForSale": true,
-            "selectedOptions": [
-              {
-                "name": "Style",
-                "value": "Men's Long Sleeve T-Shirt"
-              },
-              {
-                "name": "Color",
-                "value": "Black"
-              },
-              {
-                "name": "Size",
-                "value": "XL"
-              }
-            ],
-            "image": ""
-          },
-          {
-            "id": "gid://shopify/ProductVariant/48134287032503",
-            "title": "Kaka Boston Legacy FC Elite WHT - Men's Long Sleeve T-Shirt / Black / 2XL",
-            "displayName": "Kaka Boston Legacy FC Elite WHT - Men's Long Sleeve T-Shirt / Black / 2XL",
-            "price": 43.99,
-            "compareAtPrice": null,
-            "comparePrice": null,
-            "currencyCode": null,
-            "availableForSale": true,
-            "selectedOptions": [
-              {
-                "name": "Style",
-                "value": "Men's Long Sleeve T-Shirt"
-              },
-              {
-                "name": "Color",
-                "value": "Black"
-              },
-              {
-                "name": "Size",
-                "value": "2XL"
-              }
-            ],
-            "image": ""
-          }
-        ]
-      },
-      {
-        "gid": "gid://shopify/Product/8548530553015",
-        "handle": "kaka-boston-legacy-fc-elite-wht-13",
-        "title": "Kaka Boston Legacy FC Elite WHT",
-        "image": "https://cdn.shopify.com/s/files/1/0743/1461/2919/files/Men-Premium-T-Shirt-Tri-Black_a6d781ed-fa5f-44ce-8835-fb0996f3fddb.jpg?v=1776924685",
-        "onlineStoreUrl": null,
-        "url": null,
-        "vendor": "500 LEVEL",
-        "productType": "Men's Premium T-Shirt",
-        "tags": [
-          "500 LEVEL",
-          "Shopify Collective"
-        ],
-        "collections": [],
-        "status": "ACTIVE",
-        "available": true,
-        "inventory": 6,
-        "currencyCode": null,
-        "price": 36.99,
-        "compareAtPrice": null,
-        "comparePrice": null,
-        "rating": null,
-        "ratingCount": null,
-        "variants": [
-          {
-            "id": "gid://shopify/ProductVariant/48134287065271",
-            "title": "Kaka Boston Legacy FC Elite WHT - Men's Premium T-Shirt / Tri Black / S",
-            "displayName": "Kaka Boston Legacy FC Elite WHT - Men's Premium T-Shirt / Tri Black / S",
-            "price": 36.99,
-            "compareAtPrice": null,
-            "comparePrice": null,
-            "currencyCode": null,
-            "availableForSale": true,
-            "selectedOptions": [
-              {
-                "name": "Style",
-                "value": "Men's Premium T-Shirt"
-              },
-              {
-                "name": "Color",
-                "value": "Tri Black"
-              },
-              {
-                "name": "Size",
-                "value": "S"
-              }
-            ],
-            "image": ""
-          },
-          {
-            "id": "gid://shopify/ProductVariant/48134287098039",
-            "title": "Kaka Boston Legacy FC Elite WHT - Men's Premium T-Shirt / Tri Black / M",
-            "displayName": "Kaka Boston Legacy FC Elite WHT - Men's Premium T-Shirt / Tri Black / M",
-            "price": 36.99,
-            "compareAtPrice": null,
-            "comparePrice": null,
-            "currencyCode": null,
-            "availableForSale": true,
-            "selectedOptions": [
-              {
-                "name": "Style",
-                "value": "Men's Premium T-Shirt"
-              },
-              {
-                "name": "Color",
-                "value": "Tri Black"
-              },
-              {
-                "name": "Size",
-                "value": "M"
-              }
-            ],
-            "image": ""
-          },
-          {
-            "id": "gid://shopify/ProductVariant/48134287130807",
-            "title": "Kaka Boston Legacy FC Elite WHT - Men's Premium T-Shirt / Tri Black / L",
-            "displayName": "Kaka Boston Legacy FC Elite WHT - Men's Premium T-Shirt / Tri Black / L",
-            "price": 36.99,
-            "compareAtPrice": null,
-            "comparePrice": null,
-            "currencyCode": null,
-            "availableForSale": true,
-            "selectedOptions": [
-              {
-                "name": "Style",
-                "value": "Men's Premium T-Shirt"
-              },
-              {
-                "name": "Color",
-                "value": "Tri Black"
-              },
-              {
-                "name": "Size",
-                "value": "L"
-              }
-            ],
-            "image": ""
-          },
-          {
-            "id": "gid://shopify/ProductVariant/48134287163575",
-            "title": "Kaka Boston Legacy FC Elite WHT - Men's Premium T-Shirt / Tri Black / XL",
-            "displayName": "Kaka Boston Legacy FC Elite WHT - Men's Premium T-Shirt / Tri Black / XL",
-            "price": 36.99,
-            "compareAtPrice": null,
-            "comparePrice": null,
-            "currencyCode": null,
-            "availableForSale": true,
-            "selectedOptions": [
-              {
-                "name": "Style",
-                "value": "Men's Premium T-Shirt"
-              },
-              {
-                "name": "Color",
-                "value": "Tri Black"
-              },
-              {
-                "name": "Size",
-                "value": "XL"
-              }
-            ],
-            "image": ""
-          },
-          {
-            "id": "gid://shopify/ProductVariant/48134287196343",
-            "title": "Kaka Boston Legacy FC Elite WHT - Men's Premium T-Shirt / Tri Black / 2XL",
-            "displayName": "Kaka Boston Legacy FC Elite WHT - Men's Premium T-Shirt / Tri Black / 2XL",
-            "price": 39.99,
-            "compareAtPrice": null,
-            "comparePrice": null,
-            "currencyCode": null,
-            "availableForSale": true,
-            "selectedOptions": [
-              {
-                "name": "Style",
-                "value": "Men's Premium T-Shirt"
-              },
-              {
-                "name": "Color",
-                "value": "Tri Black"
-              },
-              {
-                "name": "Size",
-                "value": "2XL"
-              }
-            ],
-            "image": ""
-          },
-          {
-            "id": "gid://shopify/ProductVariant/48134287229111",
-            "title": "Kaka Boston Legacy FC Elite WHT - Men's Premium T-Shirt / Tri Black / 3XL",
-            "displayName": "Kaka Boston Legacy FC Elite WHT - Men's Premium T-Shirt / Tri Black / 3XL",
-            "price": 40.99,
-            "compareAtPrice": null,
-            "comparePrice": null,
-            "currencyCode": null,
-            "availableForSale": true,
-            "selectedOptions": [
-              {
-                "name": "Style",
-                "value": "Men's Premium T-Shirt"
-              },
-              {
-                "name": "Color",
-                "value": "Tri Black"
-              },
-              {
-                "name": "Size",
-                "value": "3XL"
-              }
-            ],
-            "image": ""
-          }
-        ]
-      },
-      {
-        "gid": "gid://shopify/Product/8548530618551",
-        "handle": "lais-araujo-boston-legacy-fc-elite-wht-13",
-        "title": "Lais Araujo Boston Legacy FC Elite WHT",
-        "image": "https://cdn.shopify.com/s/files/1/0743/1461/2919/files/KIDS-YOUTH-HOODIE-BLACK_f88a654e-6e0a-40f6-b0f0-1cac106adf9b.jpg?v=1776924687",
-        "onlineStoreUrl": null,
-        "url": null,
-        "vendor": "500 LEVEL",
-        "productType": "Kids Youth Hoodie",
-        "tags": [
-          "500 LEVEL",
-          "Shopify Collective"
-        ],
-        "collections": [],
-        "status": "ACTIVE",
-        "available": true,
-        "inventory": 4,
-        "currencyCode": null,
-        "price": 56.99,
-        "compareAtPrice": null,
-        "comparePrice": null,
-        "rating": null,
-        "ratingCount": null,
-        "variants": [
-          {
-            "id": "gid://shopify/ProductVariant/48134287294647",
-            "title": "Lais Araujo Boston Legacy FC Elite WHT - Kids Youth Hoodie / Black / S",
-            "displayName": "Lais Araujo Boston Legacy FC Elite WHT - Kids Youth Hoodie / Black / S",
-            "price": 56.99,
-            "compareAtPrice": null,
-            "comparePrice": null,
-            "currencyCode": null,
-            "availableForSale": true,
-            "selectedOptions": [
-              {
-                "name": "Style",
-                "value": "Kids Youth Hoodie"
-              },
-              {
-                "name": "Color",
-                "value": "Black"
-              },
-              {
-                "name": "Size",
-                "value": "S"
-              }
-            ],
-            "image": ""
-          },
-          {
-            "id": "gid://shopify/ProductVariant/48134287327415",
-            "title": "Lais Araujo Boston Legacy FC Elite WHT - Kids Youth Hoodie / Black / M",
-            "displayName": "Lais Araujo Boston Legacy FC Elite WHT - Kids Youth Hoodie / Black / M",
-            "price": 56.99,
-            "compareAtPrice": null,
-            "comparePrice": null,
-            "currencyCode": null,
-            "availableForSale": true,
-            "selectedOptions": [
-              {
-                "name": "Style",
-                "value": "Kids Youth Hoodie"
-              },
-              {
-                "name": "Color",
-                "value": "Black"
-              },
-              {
-                "name": "Size",
-                "value": "M"
-              }
-            ],
-            "image": ""
-          },
-          {
-            "id": "gid://shopify/ProductVariant/48134287360183",
-            "title": "Lais Araujo Boston Legacy FC Elite WHT - Kids Youth Hoodie / Black / L",
-            "displayName": "Lais Araujo Boston Legacy FC Elite WHT - Kids Youth Hoodie / Black / L",
-            "price": 56.99,
-            "compareAtPrice": null,
-            "comparePrice": null,
-            "currencyCode": null,
-            "availableForSale": true,
-            "selectedOptions": [
-              {
-                "name": "Style",
-                "value": "Kids Youth Hoodie"
-              },
-              {
-                "name": "Color",
-                "value": "Black"
-              },
-              {
-                "name": "Size",
-                "value": "L"
-              }
-            ],
-            "image": ""
-          },
-          {
-            "id": "gid://shopify/ProductVariant/48134287392951",
-            "title": "Lais Araujo Boston Legacy FC Elite WHT - Kids Youth Hoodie / Black / XL",
-            "displayName": "Lais Araujo Boston Legacy FC Elite WHT - Kids Youth Hoodie / Black / XL",
-            "price": 56.99,
-            "compareAtPrice": null,
-            "comparePrice": null,
-            "currencyCode": null,
-            "availableForSale": true,
-            "selectedOptions": [
-              {
-                "name": "Style",
-                "value": "Kids Youth Hoodie"
-              },
-              {
-                "name": "Color",
-                "value": "Black"
-              },
-              {
-                "name": "Size",
-                "value": "XL"
-              }
-            ],
-            "image": ""
-          }
-        ]
+    // App URL comes from the theme block only (`data-fbt-api-base` / IconicFbtSettings.apiBase).
+    resolveApiBase: function (container) {
+      if (container && container.dataset && container.dataset.fbtApiBase) {
+        const fromEl = String(container.dataset.fbtApiBase).trim().replace(/\/$/, '');
+        if (fromEl) return fromEl;
       }
-    ],
-    "excludedProductGids": [],
-    "selectedRecommendationCount": 4
+      const settings = window.IconicFbtSettings || {};
+      const fromSettings = settings.apiBase && String(settings.apiBase).trim();
+      if (fromSettings) return fromSettings.replace(/\/$/, '');
+      return '';
     },
-  
-    /**
-     * Fetches product recommendations from the custom API.
-     * @param {string} shopDomain - The Shopify store domain (e.g., 'shop.myshopify.com')
-     * @param {string|number} productId - The ID of the current product
-     * @returns {Promise<Object|null>} - Returns the API response data or null if an error occurs
-     */
-    fetchRecommendations: async function(shopDomain, productId) {
-      /* Commenting out actual fetch for testing
+
+    fetchRecommendations: async function (shopDomain, productId, container) {
       if (!shopDomain || !productId) {
-        console.error('Iconic FBT: shopDomain and productId are required to fetch recommendations.');
+        console.error('Iconic FBT: shopDomain and productId are required.');
         return null;
       }
-  
-      const baseUrl = 'https://optimize-antibody-contrary-infections.trycloudflare.com/api/recommendation';
-      const url = `${baseUrl}?shop=${encodeURIComponent(shopDomain)}&productId=${encodeURIComponent(productId)}`;
-  
+
+      const apiBase = this.resolveApiBase(container);
+      if (!apiBase) {
+        console.error('Iconic FBT: apiBase is required. Set iconic_fbt_api_base in the FBT block Liquid.');
+        return null;
+      }
+
+      const url =
+        apiBase +
+        '/api/recommendation?shop=' +
+        encodeURIComponent(shopDomain) +
+        '&productId=' +
+        encodeURIComponent(productId);
+
       try {
         const response = await fetch(url, {
           method: 'GET',
-          headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-          }
+          headers: { Accept: 'application/json' },
         });
-  
+
         if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
+          throw new Error('HTTP ' + response.status);
         }
-  
-        const data = await response.json();
-        return data;
+
+        return await response.json();
       } catch (error) {
         console.error('Iconic FBT API Error:', error);
         return null;
       }
-      */
-      
-      // Returning dummy data immediately as a resolved Promise
-      return Promise.resolve(this.dummyData);
-    }
+    },
   };
       const CART_ADD_URL = (window.routes && window.routes.cart_add_url) || '/cart/add.js';
       const CART_URL = (window.routes && window.routes.cart_url) || '/cart';
@@ -1456,6 +843,28 @@
         if (h) return '/products/' + h;
         return '#';
       }
+
+      function variantIdFromPayload(id) {
+        const s = String(id || '').trim();
+        if (!s) return '';
+        const parts = s.split('/');
+        return parts[parts.length - 1] || s;
+      }
+
+      function hideFbtWidget(container) {
+        const block = container && container.closest ? container.closest('.iconic-block-fbt') : null;
+        if (block) {
+          block.style.display = 'none';
+          return;
+        }
+        if (container) container.style.display = 'none';
+      }
+
+      function shouldShowFbtFromApiData(data) {
+        if (!data || data.widgetDisabled === true) return false;
+        const products = data.recommendationProducts;
+        return Array.isArray(products) && products.length > 0;
+      }
   
       async function fetchRecommendations() {
         const containers = document.querySelectorAll('[data-iconic-fbt][data-fbt-source="api"]');
@@ -1471,15 +880,33 @@
             (container.dataset && container.dataset.fbtProductId) ||
             (window.IconicFbtSettings && window.IconicFbtSettings.productId) ||
             '';
-          const sym = container.closest('.iconic-block-fbt').dataset.currencySymbol || '$';
+          const blockEl = container.closest('.iconic-block-fbt');
+          const sym = (blockEl && blockEl.dataset.currencySymbol) || '$';
           
           if (!IconicFbtApi) {
-            container.style.opacity = '1';
-            return;
+            hideFbtWidget(container);
+            continue;
+          }
+
+          if (!shop || !productId) {
+            hideFbtWidget(container);
+            continue;
           }
           
           try {
-            const data = await IconicFbtApi.fetchRecommendations(shop, productId);
+            const data = await IconicFbtApi.fetchRecommendations(shop, productId, container);
+            if (!shouldShowFbtFromApiData(data)) {
+              hideFbtWidget(container);
+              continue;
+            }
+
+            const currencyFromApi =
+              (data.recommendationProducts[0] && data.recommendationProducts[0].currencyCode) ||
+              data.currencyCode;
+            if (currencyFromApi && container.dataset) {
+              container.dataset.currencyCode = String(currencyFromApi);
+            }
+
             if (data && data.recommendationProducts && data.recommendationProducts.length > 0) {
               const visualRow = container.querySelector('.iconic-fbt-visual-row');
               const listRow = container.querySelector('.iconic-fbt-list');
@@ -1508,7 +935,13 @@
 
               data.recommendationProducts.forEach((product, i) => {
                 const index = i + 1; // 0 is main product
-                const priceCents = Math.round(product.price * 100);
+                const unitPrice =
+                  product.price != null && Number.isFinite(Number(product.price))
+                    ? Number(product.price)
+                    : product.variants && product.variants[0] && product.variants[0].price != null
+                      ? Number(product.variants[0].price)
+                      : 0;
+                const priceCents = Math.round(unitPrice * 100);
                 
                 // Visual Row
                 if (visualRow) {
@@ -1537,7 +970,7 @@
                   if (product.variants && product.variants.length > 1) {
                     variantsHtml = `<select class="iconic-fbt-variant-select" data-fbt-variant-select>`;
                     product.variants.forEach((v, vIdx) => {
-                      const vId = v.id.split('/').pop();
+                      const vId = variantIdFromPayload(v.id);
                       const vPrice = Math.round(v.price * 100);
                       const vCompareAt = v.compareAtPrice ? Math.round(v.compareAtPrice * 100) : 0;
                       const vImage = v.image || product.image || '';
@@ -1546,7 +979,7 @@
                     variantsHtml += `</select>`;
                   } else if (product.variants && product.variants.length === 1) {
                     const v = product.variants[0];
-                    const vId = v.id.split('/').pop();
+                    const vId = variantIdFromPayload(v.id);
                     const vPrice = Math.round(v.price * 100);
                     const vCompareAt = v.compareAtPrice ? Math.round(v.compareAtPrice * 100) : 0;
                     variantsHtml = `<input type="hidden" data-fbt-variant-id value="${vId}" data-price="${vPrice}" data-compare-at-price="${vCompareAt}" data-available="${v.availableForSale}">`;
@@ -1596,15 +1029,14 @@
                 }
               });
             }
+
+            bindFbt(container);
+            updateTotal(container);
+            container.style.opacity = '1';
           } catch (e) {
             console.error('Error fetching FBT recommendations from API:', e);
+            hideFbtWidget(container);
           }
-          
-          bindFbt(container);
-          // FIX: Force total recalculation after all API rows are injected and bound.
-          // This guarantees the total shows all products on first render.
-          updateTotal(container);
-          container.style.opacity = '1';
         }
       }
     
