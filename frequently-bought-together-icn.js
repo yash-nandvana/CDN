@@ -1,6 +1,9 @@
 // iconic-fbt-api.js
 
 (function () {
+  if (window.__iconicFbtStorefrontInit) return;
+  window.__iconicFbtStorefrontInit = true;
+
   const IconicFbtApi = {
     // App URL comes from the theme block only (`data-fbt-api-base` / IconicFbtSettings.apiBase).
     resolveApiBase: function (container) {
@@ -851,8 +854,93 @@
         return parts[parts.length - 1] || s;
       }
 
-      function hideFbtWidget(container) {
+      function trimVariantOptionLabel(opt) {
+        if (!opt || opt.dataset.fbtVariantTrimmed === '1') return;
+        const text = (opt.textContent || '').trim();
+        const firstSlash = text.indexOf(' / ');
+        if (firstSlash > -1) {
+          const firstSegment = text.slice(0, firstSlash);
+          if (firstSegment.indexOf(' - ') > -1) {
+            opt.textContent = text.slice(firstSlash + 3).trim();
+          }
+        }
+        opt.dataset.fbtVariantTrimmed = '1';
+      }
+
+      function trimVariantSelect(select) {
+        if (!select || !select.options) return;
+        for (let i = 0; i < select.options.length; i++) trimVariantOptionLabel(select.options[i]);
+      }
+
+      function applyVariantLabelTrim(root) {
+        if (!root) return;
+        root.querySelectorAll('.iconic-fbt-variant-select').forEach(trimVariantSelect);
+      }
+
+      // Strip "Product - Subtitle / " prefix from variant dropdown labels (theme + API rows).
+      function initVariantLabelTrim(root) {
+        if (!root || root.dataset.fbtVariantTrimInit === 'true') return;
+        root.dataset.fbtVariantTrimInit = 'true';
+        applyVariantLabelTrim(root);
+        if (typeof MutationObserver === 'undefined') return;
+        new MutationObserver(function () {
+          applyVariantLabelTrim(root);
+        }).observe(root, { childList: true, subtree: true });
+      }
+
+      function isFbtThemeEditor(block) {
+        if (!block) return false;
+        if (block.dataset.fbtDesignMode === 'true') return true;
+        return typeof Shopify !== 'undefined' && !!Shopify.designMode;
+      }
+
+      function getHiddenNoticeCopy(data, productTitle) {
+        const name = (productTitle || '').trim() || 'this product';
+        const safeName = escapeHtml(name);
+        if (data && data.productWidgetDisabled) {
+          return {
+            line1:
+              'Frequently Bought Together is hidden because <strong>' +
+              safeName +
+              '</strong> has the widget disabled in the app.',
+            line2: 'Open the app → Bundle setup → Hidden widgets to change this.',
+          };
+        }
+        return {
+          line1:
+            'No recommendations are showing for <strong>' + safeName + '</strong> yet.',
+          line2: 'Open the app to add manual, global, or smart recommendations.',
+        };
+      }
+
+      function showFbtEditorHiddenNotice(block, apiData) {
+        const inner = block.querySelector('.iconic-fbt-inner');
+        if (inner) inner.style.display = 'none';
+
+        block.style.display = '';
+        block.classList.add('iconic-block-fbt--editor-notice');
+
+        let notice = block.querySelector('[data-fbt-editor-notice]');
+        if (!notice) {
+          notice = document.createElement('div');
+          notice.className = 'iconic-fbt-editor-notice';
+          notice.setAttribute('data-fbt-editor-notice', '');
+          const section = block.querySelector('.iconic-fbt-section');
+          if (section) section.prepend(notice);
+          else block.prepend(notice);
+        }
+
+        const copy = getHiddenNoticeCopy(apiData, block.dataset.fbtProductTitle || '');
+        notice.innerHTML = '<p>' + copy.line1 + '</p><p>' + copy.line2 + '</p>';
+        notice.removeAttribute('hidden');
+      }
+
+      function hideFbtWidget(container, apiData) {
         const block = container && container.closest ? container.closest('.iconic-block-fbt') : null;
+        if (block && isFbtThemeEditor(block)) {
+          showFbtEditorHiddenNotice(block, apiData);
+          return;
+        }
         if (block) {
           block.style.display = 'none';
           return;
@@ -884,19 +972,19 @@
           const sym = (blockEl && blockEl.dataset.currencySymbol) || '$';
           
           if (!IconicFbtApi) {
-            hideFbtWidget(container);
+            hideFbtWidget(container, { widgetDisabled: true });
             continue;
           }
 
           if (!shop || !productId) {
-            hideFbtWidget(container);
+            hideFbtWidget(container, { widgetDisabled: true });
             continue;
           }
           
           try {
             const data = await IconicFbtApi.fetchRecommendations(shop, productId, container);
             if (!shouldShowFbtFromApiData(data)) {
-              hideFbtWidget(container);
+              hideFbtWidget(container, data);
               continue;
             }
 
@@ -1030,18 +1118,28 @@
               });
             }
 
+            const blockRoot = container.closest('.iconic-block-fbt');
+            if (blockRoot) {
+              blockRoot.classList.remove('iconic-block-fbt--editor-notice');
+              const editorNotice = blockRoot.querySelector('[data-fbt-editor-notice]');
+              if (editorNotice) editorNotice.setAttribute('hidden', '');
+              const inner = container;
+              if (inner) inner.style.removeProperty('display');
+            }
+
             bindFbt(container);
             updateTotal(container);
             container.style.opacity = '1';
           } catch (e) {
             console.error('Error fetching FBT recommendations from API:', e);
-            hideFbtWidget(container);
+            hideFbtWidget(container, { widgetDisabled: true });
           }
         }
       }
     
       function initLayoutDetection() {
         document.querySelectorAll('.iconic-block-fbt').forEach(function(block) {
+          initVariantLabelTrim(block);
           if (!block.classList.contains('iconic-block-fbt--product-details')) {
             var isProductInfo = block.closest('.product__info-container, .product-info, .product-details-wrapper, .product-form, [id*="ProductInfo"], .product__column--info, form[action*="/cart/add"]');
             if (isProductInfo) {
