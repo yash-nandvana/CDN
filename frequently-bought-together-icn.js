@@ -290,35 +290,53 @@
     const discountTotal = Array.from(allocations.values()).reduce((sum, amount) => sum + amount, 0);
     if (discountTotal <= 0) return inactiveState;
 
-    let message = String(config.discountMessage || '').trim();
-    if (type === 'PERCENTAGE' && config.discountPercentage && !message.includes('%')) {
-      message = message ? `${message} (${config.discountPercentage}% off)` : `${config.discountPercentage}% off`;
-    }
-
     return {
       active: true,
       config,
       allocations,
       baseTotal,
       discountedTotal: Math.max(0, baseTotal - discountTotal),
-      originalTotal: Math.max(originalTotal, baseTotal),
-      message
+      originalTotal: Math.max(originalTotal, baseTotal)
     };
   }
 
-  function updateDiscountMessage(container, discountState) {
-    const messageWrap = container.querySelector('[data-fbt-discount-message]');
-    if (!messageWrap) return;
+  function discountTypeShowsWidgetSubheading(type) {
+    const normalized = String(type || '').toUpperCase();
+    return normalized === 'PERCENTAGE' || normalized === 'FIXED';
+  }
 
-    const messageText = discountState && discountState.active ? discountState.message : '';
-    if (messageText) {
-      messageWrap.style.removeProperty('display');
+  function getSubheadingText(container) {
+    const inner = container.classList.contains('iconic-fbt-inner')
+      ? container
+      : container.querySelector('.iconic-fbt-inner');
+    const raw =
+      (inner && inner.dataset.fbtSubheadingText) ||
+      container.closest('.iconic-block-fbt')?.dataset.fbtSubheadingText ||
+      '';
+    return String(raw).trim();
+  }
+
+  function updateSubheading(container, discountState) {
+    const subheadingWrap = container.querySelector('[data-fbt-subheading]');
+    if (!subheadingWrap) return;
+
+    const text = getSubheadingText(container);
+    const block = container.closest('.iconic-block-fbt');
+    const inEditor = isFbtThemeEditor(block);
+    const showForDiscount =
+      discountState &&
+      discountState.active &&
+      discountState.config &&
+      discountTypeShowsWidgetSubheading(discountState.config.discountType);
+
+    if (text && (inEditor || showForDiscount)) {
+      subheadingWrap.style.removeProperty('display');
+      const paragraph = subheadingWrap.querySelector('p');
+      if (paragraph) paragraph.textContent = text;
+      else subheadingWrap.textContent = text;
     } else {
-      messageWrap.style.display = 'none';
+      subheadingWrap.style.display = 'none';
     }
-    const paragraph = messageWrap.querySelector('p');
-    if (paragraph) paragraph.textContent = messageText;
-    else messageWrap.textContent = messageText;
   }
 
   function buildPriceHtml(current, original, sym, code, container, options) {
@@ -561,7 +579,7 @@
     const currencyCode = getFbtSetting(container, 'currencyCode', '');
     const code = currencyCode ? ` ${currencyCode}` : '';
     const discountState = calculateDiscountState(container);
-    updateDiscountMessage(container, discountState);
+    updateSubheading(container, discountState);
     getBundleRows(container).forEach(row => {
       updateRowPriceDisplay(row, container, sym, discountState);
     });
