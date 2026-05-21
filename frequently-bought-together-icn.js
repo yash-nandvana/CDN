@@ -991,6 +991,79 @@
     if (container) container.style.display = 'none';
   }
 
+  function mapStorefrontProduct(p) {
+    // Widget expects prices as dollar floats (e.g. 19.99) — it multiplies by 100 internally.
+    var toFloat = function(v) { return parseFloat(v || '0') || 0; };
+    var variants = p.variants || [];
+    var firstVariant = variants[0] || {};
+    var available = variants.some(function(v) { return !!v.available; });
+    return {
+      gid: 'gid://shopify/Product/' + p.id,
+      id: 'gid://shopify/Product/' + p.id,
+      title: p.title || '',
+      handle: p.handle || '',
+      url: '/products/' + p.handle,
+      onlineStoreUrl: '/products/' + p.handle,
+      image: ((p.images || [])[0] || {}).src || '',
+      vendor: p.vendor || '',
+      productType: p.product_type || '',
+      tags: p.tags || [],
+      available: available,
+      price: toFloat(firstVariant.price),
+      compareAtPrice: firstVariant.compare_at_price ? toFloat(firstVariant.compare_at_price) : null,
+      variants: variants.map(function(v) {
+        return {
+          id: 'gid://shopify/ProductVariant/' + v.id,
+          title: v.title || '',
+          price: toFloat(v.price),
+          compareAtPrice: v.compare_at_price ? toFloat(v.compare_at_price) : null,
+          availableForSale: !!v.available,
+          image: '',
+          selectedOptions: [],
+        };
+      }),
+    };
+  }
+
+  async function fetchRandomProducts(container, randomHint, excludedProductGids, sourceProductId) {
+    var needed = randomHint && randomHint.needed;
+    if (!needed || needed <= 0) return [];
+
+    var filterType = randomHint.filterType || '';
+    var productType     = getFbtSetting(container, 'fbtProductType', '');
+    var productVendor   = getFbtSetting(container, 'fbtProductVendor', '');
+    var collectionHandle = getFbtSetting(container, 'fbtProductCollection', '');
+
+    var url = '/products.json?limit=50';
+    if (filterType === 'filter_by_product_type' && productType) {
+      url = '/products.json?product_type=' + encodeURIComponent(productType) + '&limit=50';
+    } else if (filterType === 'filter_by_product_vendor' && productVendor) {
+      url = '/products.json?vendor=' + encodeURIComponent(productVendor) + '&limit=50';
+    } else if (filterType === 'filter_by_manual_collection' && collectionHandle) {
+      url = '/collections/' + encodeURIComponent(collectionHandle) + '/products.json?limit=50';
+    }
+
+    var excludedIds = new Set();
+    if (sourceProductId) excludedIds.add(String(sourceProductId));
+    (excludedProductGids || []).forEach(function(g) {
+      var m = /\/(\d+)$/.exec(String(g));
+      if (m) excludedIds.add(m[1]);
+    });
+
+    try {
+      var res = await fetch(url, { headers: { Accept: 'application/json' } });
+      if (!res.ok) return [];
+      var json = await res.json();
+      var all = (json.products || []).filter(function(p) {
+        return !excludedIds.has(String(p.id)) && (p.variants || []).some(function(v) { return !!v.available; });
+      });
+      var shuffled = all.slice().sort(function() { return Math.random() - 0.5; });
+      return shuffled.slice(0, needed).map(mapStorefrontProduct);
+    } catch (e) {
+      return [];
+    }
+  }
+
   function shouldShowFbtFromApiData(data) {
     if (!data || data.widgetDisabled === true) return false;
     const products = data.recommendationProducts;
@@ -1026,6 +1099,14 @@
 
       try {
         const data = await IconicFbtApi.fetchRecommendations(shop, productId, container);
+
+        if (data && data.randomHint && data.randomHint.needed > 0) {
+          const randomProducts = await fetchRandomProducts(container, data.randomHint, data.excludedProductGids, productId);
+          if (randomProducts.length) {
+            data.recommendationProducts = (data.recommendationProducts || []).concat(randomProducts);
+          }
+        }
+
         if (!shouldShowFbtFromApiData(data)) {
           hideFbtWidget(container, data);
           continue;
