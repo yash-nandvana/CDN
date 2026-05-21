@@ -300,36 +300,26 @@
     };
   }
 
-  function discountTypeShowsWidgetSubheading(type) {
-    const normalized = String(type || '').toUpperCase();
-    return normalized === 'PERCENTAGE' || normalized === 'FIXED';
-  }
-
-  function getSubheadingText(container) {
+  function getSubheadingText(container, subheadingWrap) {
     const inner = container.classList.contains('iconic-fbt-inner')
       ? container
       : container.querySelector('.iconic-fbt-inner');
-    const raw =
+    const fromDataset =
       (inner && inner.dataset.fbtSubheadingText) ||
       container.closest('.iconic-block-fbt')?.dataset.fbtSubheadingText ||
       '';
-    return String(raw).trim();
+    if (String(fromDataset).trim()) return String(fromDataset).trim();
+    const paragraph = subheadingWrap && subheadingWrap.querySelector('p');
+    return paragraph ? String(paragraph.textContent || '').trim() : '';
   }
 
-  function updateSubheading(container, discountState) {
+  // Theme block subheading: show whenever the Subheading setting has text (not discount-gated).
+  function updateSubheading(container) {
     const subheadingWrap = container.querySelector('[data-fbt-subheading]');
     if (!subheadingWrap) return;
 
-    const text = getSubheadingText(container);
-    const block = container.closest('.iconic-block-fbt');
-    const inEditor = isFbtThemeEditor(block);
-    const showForDiscount =
-      discountState &&
-      discountState.active &&
-      discountState.config &&
-      discountTypeShowsWidgetSubheading(discountState.config.discountType);
-
-    if (text && (inEditor || showForDiscount)) {
+    const text = getSubheadingText(container, subheadingWrap);
+    if (text) {
       subheadingWrap.style.removeProperty('display');
       const paragraph = subheadingWrap.querySelector('p');
       if (paragraph) paragraph.textContent = text;
@@ -579,7 +569,7 @@
     const currencyCode = getFbtSetting(container, 'currencyCode', '');
     const code = currencyCode ? ` ${currencyCode}` : '';
     const discountState = calculateDiscountState(container);
-    updateSubheading(container, discountState);
+    updateSubheading(container);
     getBundleRows(container).forEach(row => {
       updateRowPriceDisplay(row, container, sym, discountState);
     });
